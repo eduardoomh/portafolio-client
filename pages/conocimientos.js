@@ -18,8 +18,9 @@ export default function Conocimientos(){
             </Head>
             <LayoutBasico>
                 <Cabecera 
-                    titulo="CONOCIMIENTOS"
+                    titulo="MIS CONOCIMIENTOS"
                     descripcion="Aqui estan todos los conocimientos que tengo."
+                    gif="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif"
                 />
                 <ElementList 
                     data={data.obtenerConocimientos}

@@ -105,6 +105,14 @@ export default function Navegacion(){
 
            }
 
+           a{
+               display: flex;
+               aligh-items: center;
+               justify-content: center;
+               min-height: 4rem;
+               padding: 1.2rem 0;
+           }
+
             .seleccionado{
             }
         `}</style>

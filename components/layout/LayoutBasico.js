@@ -1,4 +1,5 @@
 import Navegacion from "../Navegacion";
+import Footer from "../reutilizables/Footer";
 
 export default function LayoutBasico(props){
     const {children} = props;
@@ -9,6 +10,7 @@ export default function LayoutBasico(props){
             <main>
                 {children}
             </main>
+            <Footer />
         </div>
     )
 }

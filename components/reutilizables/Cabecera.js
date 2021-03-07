@@ -1,45 +1,59 @@
 export default function Cabecera(props){
-    const{titulo, descripcion} = props;
+    const{titulo, descripcion, gif} = props;
 
     return(
         <>
-            <div>
-                <h1>{titulo}</h1>
-                <p>{descripcion}</p>
-                <article className="contenido">
-                    <p>contenido</p>
+            <div className="contenedor">
+                <div className="contenido">
+                    <h1>{titulo}</h1>
+                    <p>{descripcion}</p>
+                </div>
+                <article className="contenido-gif">
+                    <img alt="hombre en su computador" src={gif} />
                 </article>
             </div>
 
             <style jsx>{`
-                div{
+                .contenedor{
                     display: grid;
-                    grid-template-columns: 1fr 3fr;
+                    grid-template-columns: 1.4fr 1.6fr;
                     grid-template-rows: 1fr;
-                    max-width: 100vw;
-                    min-height: 20rem;
-                    max-height: 20rem;
-                    background-color: #5b83a1;
-                    padding: 1rem 4rem;
+                    min-height: 28rem;
+                    padding: 2rem;
+                    margin: 2rem 4rem;
+                    border: 1px solid #ECDEDE;
+                    border-radius: 15px;
+                    background-color: rgba(202, 202, 202, .1); 
+                    font-family: Radley;
                 }
 
-                h1{
-                    grid-column: 1/2;
-                    grid-row: 1/2;
-                }
-                p{
-                    grid-column: 1/2;
-                    grid-row: 2/3;
-                }
                 .contenido{
-                    display: flex;
-                    aligh-items: grow;
-                    background-color: #FaB95B;
-                    min-height: 100%;
+                    margin: 2rem 3rem;
+                    font-size: 1.2rem;
+                    border-right: 2px solid #BCB1B1;
                 }
 
+                .contenido p{
+                    color: #814E4E;
+                    font-size: 1.5rem;
+                }
 
-        `}</style>
+                .contenido-gif{
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .contenido-gif img{
+                    height: 20rem;
+
+                }
+
+                .contenido h1{
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                }
+
+            `}</style>
         </>
     )
 }
