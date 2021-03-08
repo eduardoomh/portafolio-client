@@ -10,7 +10,7 @@ export default function Navegacion(){
         <>
             <header>
                 <div>
-                    <img src={usuario.imagen} alt="JesusMH"/>
+                    <img src={usuario?.imagen} alt="JesusMH"/>
                     <p>PORTAFOLIO</p>
                 </div>
                 <nav>

@@ -15,8 +15,6 @@ export default function Proyectos(){
 
     }, [data]);
 
-    if(loading) return null;
-
     return(
         <>
             <Head>
@@ -27,10 +25,16 @@ export default function Proyectos(){
                 <Cabecera 
                         titulo="PROYECTOS"
                         descripcion="Aqui estan los proyectos en los que estoy trabajando."
+                        gif="https://media.giphy.com/media/SpopD7IQN2gK3qN4jS/giphy.gif"
                     />
-                <ElementList 
-                    data={data.obtenerProyectos} 
-                />
+                {
+                    loading 
+                        ? <p>cargando</p>
+                        :  <ElementList 
+                                data={data.obtenerProyectos} 
+                            />
+                }
+
      
             </LayoutBasico>
         </>
