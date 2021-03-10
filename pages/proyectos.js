@@ -4,7 +4,6 @@ import {useQuery} from "@apollo/client";
 import {OBTENER_PROYECTOS, OBTENER_PROYECTOS_TERMINADOS} from "../graphql/querys/proyecto";
 import LayoutBasico from "../components/layout/LayoutBasico";
 import Cabecera from "../components/reutilizables/Cabecera";
-import ElementList from "../components/reutilizables/ElementList";
 import BotonContenedor from "../components/reutilizables/BotonContainer";
 import ProyectosList from "../components/reutilizables/ProyectosList";
 
@@ -49,7 +48,7 @@ export default function Proyectos(){
 
                         )
                 }
-                <BotonContenedor ruta="/Contacto" texto="Contactame" />
+                <BotonContenedor ruta="/contacto" texto="Contactame" />
 
      
             </LayoutBasico>

@@ -1,24 +1,26 @@
 import usePerfil from "../../hooks/usePerfil";
+import useEstilos from "../../hooks/useEstilos";
 
-export default function CabeceraPerfil(){
-    const {usuario} = usePerfil();
+export default function CabeceraPerfil() {
+    const { usuario } = usePerfil();
+    const { estilos } = useEstilos();
 
-    return(
+    return (
         <>
             <div className="cabecera">
                 <div className="cabecera_perfil">
                     <img src={usuario.imagen} />
-                    <h2>{usuario.nombres} <br/> {usuario.apellido_paterno} {usuario.apellido_materno}</h2>
+                    <h2>{usuario.nombres} <br /> {usuario.apellido_paterno} {usuario.apellido_materno}</h2>
                     <p>{usuario.apodo}</p>
                 </div>
-                
+
                 <div className="cabecera_contenido">
                     <h1>BUEN DIA! <br /> SOY DESARROLLADOR WEB <br /> BIENVENIDO A MI PORTAFOLIO PERSONAL</h1>
                     <div>
-                       <img src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif"></img> 
+                        <img src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif"></img>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
 
@@ -30,11 +32,11 @@ export default function CabeceraPerfil(){
                     min-height: 30rem;
                     padding: 4rem;
                     margin: 2rem 4rem;
-                    border: 1px solid #ECDEDE;
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
                     border-radius: 15px;
-                    background-color: rgba(202, 202, 202, .1); 
+                    background-color: ${estilos.colores.grisClaro}; 
                     font-family: Radley;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                    box-shadow: ${estilos.colores.sombra};
                     overflow-x: hidden;
 
                 }
@@ -42,17 +44,33 @@ export default function CabeceraPerfil(){
 
                 .cabecera:hover{
                     transition: .3s;
-                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                    box-shadow: ${estilos.colores.sombraHover};
+                }
+
+                @media (max-width: 1085px) {
+                        .cabecera{
+                            margin: 2rem 1rem;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                @media (max-width: 865px) {
+                        .cabecera{
+                            width: 100%;
+                        }
+
+                    }
                 }
 
                 .cabecera_perfil{
                     margin: 2rem 3rem;
                     font-size: 1.2rem;
-                    border-right: 2px solid #BCB1B1;
+                    border-right: 2px solid ${estilos.colores.bordeGrisClaro};
                 }
 
                 .cabecera_perfil p{
-                    color: #814E4E;
+                    color: ${estilos.colores.letraRojiza};
                     animation-delay: 0;
                     animation-duration: 1.5s;
                     animation-name: apodo;

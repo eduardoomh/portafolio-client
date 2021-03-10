@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CardProyecto from "./CardProyecto";
 
 export default function ProyectosList(props){
@@ -9,8 +10,20 @@ export default function ProyectosList(props){
                 <h2>Proyectos {texto}</h2>
                 <div className="proyectos">
                     {
+                        data.length === 0 ?
+                        (
+                            <p>No hay proyectos en esta categoria</p>
+                        )
+                        :
+                        
                         data?.map(d => (
-                            <CardProyecto data={d} key={d.id}/>
+                            <Link href={`/proyectos/${d.id}`}>
+                                <a>
+                                  <CardProyecto data={d} key={d.id}/>  
+                                </a>
+                            
+                            </Link>
+                            
                         ))
                     }
 

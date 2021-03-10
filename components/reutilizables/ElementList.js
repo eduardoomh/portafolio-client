@@ -1,6 +1,8 @@
+import useEstilos from "../../hooks/useEstilos";
 
 export default function ElementList(props){
     const {data, tipo} = props;
+    const {estilos} = useEstilos();
 
     return(
         <>
@@ -9,7 +11,7 @@ export default function ElementList(props){
                 {
                     data?.map(d => (
                         <article>
-                            <h3>{d.nombre}</h3>
+                            <h3>{d.nombre || "cargando"}</h3>
                             <ul>
                                 {
                                     d.tecnologias.map(t => (
@@ -44,14 +46,14 @@ export default function ElementList(props){
                     display: grid;
                     grid-template-columns: 3fr 1fr;
                     grid-template-rows: 1fr;
-                    background-color: #FCFAFA;
-                    border: 1px solid #ECDEDE;
+                    background-color: ${estilos.colores.grisCrema};
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
                     border-radius: 10px;
                 }
 
                 article:hover{
                     transition: .3s;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                    box-shadow:${estilos.colores.sombraHover};
                     cursor: pointer;
                 }
 
@@ -61,7 +63,7 @@ export default function ElementList(props){
                     align-items: center;
                     max-width: 5rem;
                     max-height: 5rem;
-                    border: 1px solid #ECDEDE;
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
                     background-color: transparent;
                     padding: .5rem 1rem;
                 }
@@ -79,8 +81,8 @@ export default function ElementList(props){
                 }
 
                 article h3{
-                    font-size: 1.8rem;
-                    color: #773636;
+                    font-size: 1.6rem;
+                    color: ${estilos.colores.letraRojizaSecundaria};
                     padding: 0 2rem;
                 }
 

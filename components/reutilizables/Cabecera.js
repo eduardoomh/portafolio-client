@@ -1,5 +1,8 @@
+import useEstilos from "../../hooks/useEstilos";
+
 export default function Cabecera(props){
     const{titulo, descripcion, gif} = props;
+    const {estilos} = useEstilos();
 
     return(
         <>
@@ -21,22 +24,22 @@ export default function Cabecera(props){
                     min-height: 28rem;
                     padding: 2rem;
                     margin: 2rem 4rem;
-                    border: 1px solid #ECDEDE;
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
                     border-radius: 15px;
-                    background-color: rgba(202, 202, 202, .1); 
+                    background-color: ${estilos.colores.grisClaro}; 
                     font-family: Radley;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                    box-shadow: ${estilos.colores.sombra};
                 }
 
                 .contenedor:hover{
                     transition: .3s;
-                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                    box-shadow: ${estilos.colores.sombraHover};
                 }
 
                 .contenido{
                     margin: 2rem 3rem;
                     font-size: 1.2rem;
-                    border-right: 2px solid #BCB1B1;
+                    border-right: 2px solid ${estilos.colores.bordeGrisClaro};
                     animation-delay: 0;
                     animation-duration: 1.5s;
                     animation-name: contenido;
@@ -44,7 +47,7 @@ export default function Cabecera(props){
                 }
 
                 .contenido p{
-                    color: #814E4E;
+                    color: ${estilos.colores.letraRojiza};
                     font-size: 1.5rem;
                 }
 
@@ -55,7 +58,7 @@ export default function Cabecera(props){
 
                 .contenido-gif img{
                     height: 20rem;
-                    border: 1px solid #ECDEDE;
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
 
                 }
 

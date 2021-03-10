@@ -21,7 +21,7 @@ export default function Home() {
       <LayoutBasico>
         <CabeceraPerfil />
         <ContenedorDatosPerfil usuario={usuario} />
-        <BotonContainer ruta="/conocimientos" texto="Mi Conocimientos" />
+        <BotonContainer ruta="/conocimientos" texto="Mis Conocimientos" />
       </LayoutBasico>
 
     </>

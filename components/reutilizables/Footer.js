@@ -1,4 +1,8 @@
+import useEstilos from "../../hooks/useEstilos";
+
 export default function Footer(){
+    const {estilos} = useEstilos();
+
     return(
         <>
             <footer>
@@ -12,8 +16,8 @@ export default function Footer(){
                     justify-content: center;
                     align-items: center;
                     height: 4rem;
-                    background-color: #424449;
-                    color: #E1D5D5;
+                    background-color: ${estilos.colores.negroOpaco};
+                    color: ${estilos.colores.blancoLetras};
                     font-family: Radley serif;
                     font-size: 1.4rem;
                 }

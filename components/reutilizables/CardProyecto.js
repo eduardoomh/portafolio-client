@@ -1,5 +1,8 @@
+import useEstilos from "../../hooks/useEstilos";
+
 export default function CardProyecto(props){
     const {nombre, imagen, tecnologias_principales} = props.data;
+    const {estilos} = useEstilos();
 
 
     return(
@@ -24,13 +27,18 @@ export default function CardProyecto(props){
                     grid-template-rows: 4rem 1fr 2rem;
                     min-height: 26rem;
                     max-height: 26rem;
-                    min-width: 20rem;
-                    max-width: 20rem;
+                    min-width: 18rem;
+                    max-width: 18rem;
                     padding: 1rem;
-                    background-color: #F6FAFA;
-                    border: 1px solid #ECDEDE;
+                    background-color: ${estilos.colores.grisOscuro};
+                    border: 1px solid ${estilos.colores.bordeGrisClaro};
                     gap: .5rem;
                     border-radius: 8px;
+                }
+
+                .contenedor:hover{
+                    transition: .3s;
+                    background-color: ${estilos.colores.grisOscuroHover};
                 }
 
                 .contenedor div img{
@@ -59,7 +67,7 @@ export default function CardProyecto(props){
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: #69D6EE;
+                    background-color: ${estilos.colores.azulClaro};
                     max-width: 18rem;
                 }
                 p{

@@ -35,7 +35,7 @@ export default function Conocimientos() {
                                     data={dataSecundarios?.obtenerConocimientosSecundarios}
                                     tipo="Secundarios"
                                 />
-                                <BotonContainer ruta="/Proyectos" texto="Mis Proyectos"/>
+                                <BotonContainer ruta="/proyectos" texto="Mis Proyectos"/>
 
                             </>
                         )

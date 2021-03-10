@@ -1,18 +1,19 @@
-import {useRouter} from "next/router";
+import Link from "next/link";
 import Boton from "./Boton";
 
 export default function BotonContainer(props) {
     const {ruta, texto} = props;
-    const router = useRouter();
 
-    const navegacion = () => {
-        router.push(ruta);
-    }
 
     return (
         <>
             <div className="boton-container">
-                <Boton onClick={() => navegacion()}>{texto}</Boton>
+                <Link href={ruta}>
+                    <a>
+                        <Boton>{texto}</Boton>
+                    </a>
+                </Link>
+                
             </div>
 
             <style jsx>{`

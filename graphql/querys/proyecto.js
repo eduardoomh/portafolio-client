@@ -29,3 +29,31 @@ export const OBTENER_PROYECTOS_TERMINADOS = gql`
     }
 }
 `;
+
+export const OBTENER_PROYECTO = gql`
+    query obtenerProyecto($id: ID!){
+        obtenerProyecto(id: $id){
+        id
+        nombre
+        descripcion
+        imagen
+        url
+        tecnologias_principales{
+            nombre
+            imagen
+        }
+        tecnologias_secundarias{
+            nombre
+            imagen
+        }
+        detalles{
+            nombre
+        }
+        repositorios{
+            url
+            nombre
+        }
+
+    }
+}
+`

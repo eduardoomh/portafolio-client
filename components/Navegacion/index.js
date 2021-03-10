@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import usePerfil from "../../hooks/usePerfil";
+import useEstilos from "../../hooks/useEstilos";
 
 export default function Navegacion(){
     const router = useRouter();
     const {usuario} = usePerfil();
+    const {estilos} = useEstilos();
 
     return(
         <>
@@ -47,7 +49,7 @@ export default function Navegacion(){
                 min-height: 4rem;
                 max-height: 4rem;
                 padding: 0 2rem;
-                background-color: #424449;
+                background-color: ${estilos.colores.negroOpaco};
                 font-family: Radley serif;
                 }
 
@@ -84,8 +86,9 @@ export default function Navegacion(){
             }
 
             header div p{
+                font-family: Radley serif;
                 font-size: 1.3rem;
-                color: #E1D5D5;
+                color: ${estilos.colores.blancoLetras};
             }
 
             li{
@@ -94,14 +97,14 @@ export default function Navegacion(){
                padding: 0 1rem; 
                list-style: none;
                min-height: 3rem;
-               color: #E1D5D5;
+               color: ${estilos.colores.blancoLetras};
                margin: 0;
                min-height: 100%;
            }
 
            li:hover{
                 transition: .3s;
-                background-color: #363739;
+                background-color: ${estilos.colores.negroOpacoHover};
 
            }
 

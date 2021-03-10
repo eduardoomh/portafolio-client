@@ -1,5 +1,8 @@
+import useEstilos from "../../hooks/useEstilos";
+
 export default function Boton(props){
     const {children} = props;
+    const {estilos} = useEstilos();
 
     return(
         <>
@@ -14,7 +17,7 @@ export default function Boton(props){
                     font-family: Radley serif;
                     font-size: 1.5rem;
                     border-radius: 10px;
-                    border: 1px solid #989898;
+                    border: 1px solid ${estilos.colores.bordeNegro};
                     height: 3rem;
                     padding: 0 1rem;
                     background-color: transparent;
@@ -22,7 +25,7 @@ export default function Boton(props){
 
                 button:hover{
                     transition: background-color .3s;
-                    background-color: rgba(202, 202, 202, .1);
+                    background-color: ${estilos.colores.botonHover};
                     cursor: pointer;
                 }
 

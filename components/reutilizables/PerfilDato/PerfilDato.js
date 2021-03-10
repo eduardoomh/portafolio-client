@@ -1,5 +1,8 @@
+import useEstilos from "../../../hooks/useEstilos";
+
 export default function PerfilDato(props) {
     const { titulo, descripcion, gif } = props;
+    const {estilos} = useEstilos();
 
     return (
         <>
@@ -22,16 +25,16 @@ export default function PerfilDato(props) {
                 max-height: 37rem;
                 padding: 1rem 2rem;
                 margin: 3rem 4rem;
-                border: 1px solid #ECDEDE;
+                border: 1px solid ${estilos.colores.bordeGrisClaro};
                 border-radius: 15px;
-                background-color: rgba(202, 202, 202, .1); 
+                background-color: ${estilos.colores.grisClaro}; 
                 font-family: Radley;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                box-shadow: ${estilos.colores.sombra};
             }
 
             .perfil-container:hover{
                     transition: .3s;
-                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                    box-shadow: ${estilos.colores.sombraHover};
                 }
 
             .perfil-container p{
@@ -42,7 +45,7 @@ export default function PerfilDato(props) {
             .perfil-container h3{
                 font-size: 2rem;
                 font-weight: normal;
-                color: #814E4E;
+                color: ${estilos.colores.letraRojiza};
             }
             .perfil-container div{
                 display: flex;
@@ -55,6 +58,7 @@ export default function PerfilDato(props) {
                 min-height: 17rem;
                 max-height: 17rem;
                 margin: 0;
+                border: 1px solid ${estilos.colores.bordeGrisClaro};
             }
 
 
