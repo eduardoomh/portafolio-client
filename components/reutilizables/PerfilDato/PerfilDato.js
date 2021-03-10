@@ -9,8 +9,8 @@ export default function PerfilDato(props) {
                 <div>
                     <img alt="gif" src={gif} />
                 </div>
-
             </div>
+
 
             <style jsx>{`
 
@@ -26,7 +26,13 @@ export default function PerfilDato(props) {
                 border-radius: 15px;
                 background-color: rgba(202, 202, 202, .1); 
                 font-family: Radley;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             }
+
+            .perfil-container:hover{
+                    transition: .3s;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
 
             .perfil-container p{
                 font-size: 1.4rem;
@@ -50,6 +56,7 @@ export default function PerfilDato(props) {
                 max-height: 17rem;
                 margin: 0;
             }
+
 
         `}</style>
         </>

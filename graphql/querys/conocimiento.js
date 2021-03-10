@@ -14,3 +14,18 @@ export const OBTENER_CONOCIMIENTOS = gql`
     }
 }
 `;
+
+export const OBTENER_CONOCIMIENTOS_SECUNDARIOS = gql`
+    query obtenerConocimientosSecundarios{
+        obtenerConocimientosSecundarios{
+        id
+        nombre
+        descripcion
+        tecnologias{
+        id
+        nombre
+        imagen
+        }
+    }
+}
+`;

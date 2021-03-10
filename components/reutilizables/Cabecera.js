@@ -25,12 +25,22 @@ export default function Cabecera(props){
                     border-radius: 15px;
                     background-color: rgba(202, 202, 202, .1); 
                     font-family: Radley;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                }
+
+                .contenedor:hover{
+                    transition: .3s;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                 }
 
                 .contenido{
                     margin: 2rem 3rem;
                     font-size: 1.2rem;
                     border-right: 2px solid #BCB1B1;
+                    animation-delay: 0;
+                    animation-duration: 1.5s;
+                    animation-name: contenido;
+                    overflow: hidden;
                 }
 
                 .contenido p{
@@ -45,6 +55,7 @@ export default function Cabecera(props){
 
                 .contenido-gif img{
                     height: 20rem;
+                    border: 1px solid #ECDEDE;
 
                 }
 
@@ -52,6 +63,17 @@ export default function Cabecera(props){
                     font-size: 2.2rem;
                     font-weight: bold;
                 }
+
+                
+                @keyframes contenido {
+                    from {
+                        transform: scale(0.8,0.8);
+                    }
+
+                    to {
+                        transform: scale(1,1);
+                    }
+                
 
             `}</style>
         </>

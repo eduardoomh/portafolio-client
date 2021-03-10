@@ -5,19 +5,27 @@ export const OBTENER_PROYECTOS = gql`
         obtenerProyectos{
         id
         nombre
-        descripcion
-        tecnologias{
-            id
-            nombre
+        imagen
+        tecnologias_principales{
             imagen
-        }
-        detalles{
             nombre
-        }
-        repositorios{
-            url
         }
 
     }
+}
+`;
+
+export const OBTENER_PROYECTOS_TERMINADOS = gql`
+    query obtenerProyectosTerminados{
+        obtenerProyectosTerminados{
+        id
+        nombre
+        imagen
+        tecnologias_principales{
+            imagen
+            nombre
+        }
+
     }
+}
 `;
