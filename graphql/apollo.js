@@ -4,7 +4,7 @@ import {OBTENER_USUARIO} from "./querys/usuario";
 export const client = new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: 'http://localhost:4000/GRAPHQL',
+      uri: 'https://portafolio-server.herokuapp.com/graphql',
     })
   })
 

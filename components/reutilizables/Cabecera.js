@@ -24,11 +24,11 @@ export default function Cabecera(props){
                     min-height: 28rem;
                     padding: 2rem;
                     margin: 2rem 4rem;
-                    border: 1px solid ${estilos.colores.bordeGrisClaro};
+                    border: 1px solid ${estilos.colores.bordeGrisOscuro};
                     border-radius: 15px;
                     background-color: ${estilos.colores.grisClaro}; 
+                    background-image: linear-gradient(rgba(202,202,202,.1),rgba(213, 170, 170, 0.1));
                     font-family: Radley;
-                    box-shadow: ${estilos.colores.sombra};
                 }
 
                 .contenedor:hover{

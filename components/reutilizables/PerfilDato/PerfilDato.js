@@ -25,16 +25,17 @@ export default function PerfilDato(props) {
                 max-height: 37rem;
                 padding: 1rem 2rem;
                 margin: 3rem 4rem;
-                border: 1px solid ${estilos.colores.bordeGrisClaro};
+                border: 1px solid ${estilos.colores.bordeGrisOscuro};
                 border-radius: 15px;
                 background-color: ${estilos.colores.grisClaro}; 
+                background-image: ${estilos.colores.grisOscuro};
                 font-family: Radley;
-                box-shadow: ${estilos.colores.sombra};
+ 
             }
 
             .perfil-container:hover{
                     transition: .3s;
-                    box-shadow: ${estilos.colores.sombraHover};
+                    box-shadow: ${estilos.colores.sombra};
                 }
 
             .perfil-container p{
@@ -45,7 +46,7 @@ export default function PerfilDato(props) {
             .perfil-container h3{
                 font-size: 2rem;
                 font-weight: normal;
-                color: ${estilos.colores.letraRojiza};
+                color: ${estilos.colores.letraRojizaFuerte};
             }
             .perfil-container div{
                 display: flex;
@@ -60,6 +61,27 @@ export default function PerfilDato(props) {
                 margin: 0;
                 border: 1px solid ${estilos.colores.bordeGrisClaro};
             }
+
+            @media (max-width: 800px) {
+                        .perfil-container{
+                            padding: 1rem;
+                            margin: 3rem .5rem;
+                        }
+
+                        .perfil-container p{
+                            font-size: 1.2rem;
+                        }
+
+                        .perfil-container div img{
+                            min-height: 10rem;
+                            max-height: 10rem;
+                        }
+
+                        .perfil-container h3{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
 
 
         `}</style>

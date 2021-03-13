@@ -15,7 +15,7 @@ export default function Footer(){
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 4rem;
+                    height: 8rem;
                     background-color: ${estilos.colores.negroOpaco};
                     color: ${estilos.colores.blancoLetras};
                     font-family: Radley serif;

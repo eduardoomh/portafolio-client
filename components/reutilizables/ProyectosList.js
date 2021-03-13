@@ -10,7 +10,7 @@ export default function ProyectosList(props){
                 <h2>Proyectos {texto}</h2>
                 <div className="proyectos">
                     {
-                        data.length === 0 ?
+                        data?.length === 0 ?
                         (
                             <p>No hay proyectos en esta categoria</p>
                         )
