@@ -1,15 +1,17 @@
 import React,{useEffect} from "react";
 import Head from "next/head";
 import {useQuery} from "@apollo/client";
+import usePerfil from "../hooks/usePerfil";
 import {OBTENER_PROYECTOS, OBTENER_PROYECTOS_TERMINADOS} from "../graphql/querys/proyecto";
 import LayoutBasico from "../components/layout/LayoutBasico";
-import Cabecera from "../components/reutilizables/Cabecera";
+import Banner from "../components/reutilizables/Banner";
 import BotonContenedor from "../components/reutilizables/BotonContainer";
 import ProyectosList from "../components/reutilizables/ProyectosList";
 
 export default function Proyectos(){
     const {data, loading} = useQuery(OBTENER_PROYECTOS);
     const {data: dataTerminados, loading: loadingTerminados} = useQuery(OBTENER_PROYECTOS_TERMINADOS);
+    const { usuario } = usePerfil();
     
     console.log(dataTerminados)
 
@@ -25,11 +27,12 @@ export default function Proyectos(){
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <LayoutBasico>
-                <Cabecera 
-                        titulo="PROYECTOS"
-                        descripcion="Aqui estan los proyectos en los que estoy trabajando."
-                        gif="https://media.giphy.com/media/SpopD7IQN2gK3qN4jS/giphy.gif"
-                    />
+            <Banner
+                texto="Proyectos"
+                descripcion="Aqui estan los proyectos en los que estoy trabajando."
+                imagen={usuario.imagen || ""}
+            />
+
                 {
                     loading && loadingTerminados
                         ? <p>cargando</p>

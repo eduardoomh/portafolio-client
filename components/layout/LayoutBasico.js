@@ -6,7 +6,7 @@ export default function LayoutBasico(props){
 
     return(
         <>
-            <div>
+            <div className="container">
                 <Navegacion />
                 <main>
                     {children}
@@ -14,12 +14,8 @@ export default function LayoutBasico(props){
                 <Footer />
             </div>
             <style jsx>{`
-                div{
-    
-                }
-
-                div main{
-                    overflow: hidden;
+                .container main{
+                    padding-top: 4rem;
                 }
                 `}</style>
         </>

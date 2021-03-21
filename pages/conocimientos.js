@@ -1,14 +1,16 @@
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
+import usePerfil from "../hooks/usePerfil";
 import { OBTENER_CONOCIMIENTOS, OBTENER_CONOCIMIENTOS_SECUNDARIOS } from "../graphql/querys/conocimiento";
 import LayoutBasico from "../components/layout/LayoutBasico";
-import Cabecera from "../components/reutilizables/Cabecera";
+import Banner from "../components/reutilizables/Banner";
 import ElementList from "../components/reutilizables/ElementList";
 import BotonContainer from "../components/reutilizables/BotonContainer";
 
 export default function Conocimientos() {
     const { data, loading } = useQuery(OBTENER_CONOCIMIENTOS);
     const { data: dataSecundarios, loading: loadingSecundarios } = useQuery(OBTENER_CONOCIMIENTOS_SECUNDARIOS);
+    const { usuario } = usePerfil();
 
     return (
         <>
@@ -17,10 +19,10 @@ export default function Conocimientos() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <LayoutBasico>
-                <Cabecera
-                    titulo="MIS CONOCIMIENTOS"
+                <Banner
+                    texto="Conocimientos"
                     descripcion="Aqui estan todos los conocimientos que tengo."
-                    gif="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif"
+                    imagen={usuario.imagen || ""}
                 />
                 {
                     loading && loadingSecundarios
@@ -35,7 +37,7 @@ export default function Conocimientos() {
                                     data={dataSecundarios?.obtenerConocimientosSecundarios}
                                     tipo="Secundarios"
                                 />
-                                <BotonContainer ruta="/proyectos" texto="Mis Proyectos"/>
+                                <BotonContainer ruta="/proyectos" texto="Mis Proyectos" />
 
                             </>
                         )

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 import { useRouter } from 'next/router';
 import usePerfil from "../../hooks/usePerfil";
 import useEstilos from "../../hooks/useEstilos";
@@ -30,11 +31,15 @@ export default function Navegacion() {
         <>
             <header>
                 <div className="div-img">
-                    <img src={usuario?.imagen} alt="JesusMH" />
-                    <p>PORTAFOLIO</p>
+                    <Image
+                        src="/logoMH.png"
+                        alt="Picture of the author"
+                        width={98}
+                        height={32}
+                    />         
                 </div>
                 <div className="movil-menu">
-                    <HiOutlineMenu size={36} color={estilos.colores.blancoLetras} onClick={() => abrirMenu()} />
+                    <HiOutlineMenu size={36} color="white" onClick={() => abrirMenu()} />
                 </div>
                 {
                     navShow !== false ? (
@@ -55,9 +60,9 @@ export default function Navegacion() {
                                         <a>Proyectos</a>
                                     </Link>
                                 </li>
-                                <li className={router.pathname === "/contacto" ? "seleccionado" : ""}>
-                                    <Link href="/contacto">
-                                        <a>Contacto</a>
+                                <li className={router.pathname === "/mejoras" ? "seleccionado" : ""}>
+                                    <Link href="/mejoras">
+                                        <a>Mejoras</a>
                                     </Link>
                                 </li>
                             </ul>
@@ -76,9 +81,12 @@ export default function Navegacion() {
                 grid-template-columns: 10rem 1fr;
                 grid-template-rows: 1fr;
                 min-height: 4rem;
+                min-width: 100vw;
                 padding: 0 2rem;
-                background-color: ${estilos.colores.negroOpaco};
+                background-color: ${estilos.colores.negro};
                 font-family: Radley serif;
+                position: fixed;
+                z-index: 12;
                 }
 
             .nav{
@@ -154,7 +162,7 @@ export default function Navegacion() {
             @media (max-width: 500px) {
                     header{
                         display: grid;
-                        grid-template-columns: 3rem 1fr;
+                        grid-template-columns: 6rem 1fr;
                         grid-template-rows: 1fr;
                         padding:  0 1rem;
                         min-height: 3.5rem;
@@ -205,7 +213,7 @@ export default function Navegacion() {
                         max-height: 1rem !important;
                         min-height: 4rem;
                         min-width: 100%;
-                        padding-rigth: .5rem;
+                        padding-right: .5rem;
                         margin: 0;
                         gap: 0;
                         font-size: 1.5rem;
