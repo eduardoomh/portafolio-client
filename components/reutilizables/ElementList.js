@@ -18,15 +18,17 @@ export default function ElementList(props){
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: 6rem 1fr 1fr;
-                    padding: 1rem 4rem;
                     max-width: 100vw;
                     font-family: Radley;
                     gap: 2rem;
+                    margin: 1rem;
                 }
 
                 h2{
                     font-size: 2.2rem;
                     font-weight: normal;
+                    font-family: 'Noto Sans', sans-serif;
+                    color: #3C3838;
                 }
 
 

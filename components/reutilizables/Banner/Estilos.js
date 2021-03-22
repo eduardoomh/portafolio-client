@@ -4,8 +4,8 @@ export default function Estilos(){
             .cabecera{
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows:1.3fr 1fr;
-                backdrop-filter: grayscale(0.5) opacity(0.8);
+                grid-template-rows:1.3fr 12rem;
+
             }
 
             .cabecera_banner{
@@ -34,14 +34,19 @@ export default function Estilos(){
                 
             }
 
-
-            @media (max-width: 1085px) {
-
+            .cabecera_banner .avatar img{
+                animation-name: avatar;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
             }
 
-            @media (max-width: 865px) {
-    
+            @keyframes avatar {
+                from {
+                transform: scale(1.1,1.1);
+                }
             }
+
     `}</style>
     )
 }

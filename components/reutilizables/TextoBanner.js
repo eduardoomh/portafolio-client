@@ -12,7 +12,7 @@ export default function TextoBanner(props){
                 div{
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
                         text-align: center;
                         margin-top: 5px;
@@ -21,11 +21,16 @@ export default function TextoBanner(props){
 
                 div h1{
                     color: #3C3838;
+                    font-family: 'Noto Sans', sans-serif;
                 }
 
                 div p{
                     font-size: 1rem;
                 }
+
+                
+
+
 
             `}</style>
         </>

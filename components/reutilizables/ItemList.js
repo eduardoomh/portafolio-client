@@ -6,6 +6,14 @@ export default function ItemList({nombre, tecnologias}){
     return(
         <>
             <article>
+                <div className="contenedor-imagen">
+                    <img 
+                        src="https://ordenatucabeza.com/wp-content/uploads/2019/03/imagen-web-design-servicio.jpg"
+                        alt="imagen"
+                        width={130}
+                        height={130}
+                    />
+                </div>
                 <h3>{nombre || "cargando"}</h3>
                 <ul>
                     {
@@ -14,8 +22,8 @@ export default function ItemList({nombre, tecnologias}){
                                 <img 
                                     src={t.imagen} 
                                     alt={t.nombre} 
-                                    width={50}
-                                    height={50}
+                                    width={30}
+                                    height={30}
                                 />
                             </div>
                             
@@ -26,11 +34,14 @@ export default function ItemList({nombre, tecnologias}){
         <style jsx>{`
                 article{
                     display: grid;
-                    grid-template-columns: 3fr 1fr;
-                    grid-template-rows: 1fr;
+                    grid-template-columns: 1fr 2.5fr;
+                    grid-template-rows: 1fr 1fr;
                     background-color: ${estilos.colores.grisCrema};
                     border: 1px solid ${estilos.colores.bordeGrisClaro};
-                    border-radius: 10px;
+                    border-radius: 6px;
+                    min-width: 95%;
+                    max-width: 95%;
+                    height: 10rem;
                 }
 
                 article:hover{
@@ -39,13 +50,22 @@ export default function ItemList({nombre, tecnologias}){
                     cursor: pointer;
                 }
 
-                .image-array{
+                .contenedor-imagen{
+                    grid-column: 1/2;
+                    grid-row: 1/ span 2;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    max-width: 5rem;
-                    max-height: 5rem;
-                    border: 1px solid ${estilos.colores.bordeGrisClaro};
+                }
+
+                .image-array{
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 30px;
+                    max-height: 30px;
                     background-color: transparent;
                     padding: .5rem 1rem;
                 }
@@ -58,10 +78,11 @@ export default function ItemList({nombre, tecnologias}){
         
                 }
                 article h3{
-                    font-size: 1.6rem;
+                    font-size: 1.2rem;
                     color: ${estilos.colores.letraRojizaFuerte};
                     padding: 0 2rem;
                     font-weight: normal;
+                    font-family: 'Spectral';
                 }
 
                 article p{

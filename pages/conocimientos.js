@@ -22,7 +22,7 @@ export default function Conocimientos() {
                 <Banner
                     texto="Conocimientos"
                     descripcion="Aqui estan todos los conocimientos que tengo."
-                    imagen={usuario.imagen || ""}
+                    imagen={usuario?.imagen || ""}
                 />
                 {
                     loading && loadingSecundarios
