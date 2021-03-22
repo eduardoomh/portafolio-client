@@ -30,7 +30,7 @@ export default function Proyectos(){
             <Banner
                 texto="Proyectos"
                 descripcion="Aqui estan los proyectos en los que estoy trabajando."
-                imagen={usuario.imagen || ""}
+                imagen={usuario?.imagen || ""}
             />
 
                 {

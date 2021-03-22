@@ -2,8 +2,7 @@ import Head from "next/head";
 import usePerfil from "../hooks/usePerfil";
 import LayoutBasico from "../components/layout/LayoutBasico";
 import Banner from "../components/reutilizables/Banner";
-import ElementList from "../components/reutilizables/ElementList";
-import BotonContainer from "../components/reutilizables/BotonContainer";
+
 
 export default function Mejoras() {
     const { usuario } = usePerfil();
@@ -18,7 +17,7 @@ export default function Mejoras() {
                 <Banner
                     texto="Mejoras"
                     descripcion="La aplicacion esta en constante cambio"
-                    imagen={usuario.imagen || ""}
+                    imagen={usuario?.imagen || ""}
                 />
 
             </LayoutBasico>

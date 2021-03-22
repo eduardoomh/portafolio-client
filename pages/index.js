@@ -29,9 +29,9 @@ export default function Home() {
             (
               <>
                 <Banner
-                  texto={`${usuario.nombres}`}
-                  texto_secundario={`${usuario.apellido_paterno} ${usuario.apellido_materno}`}
-                  imagen={usuario.imagen}
+                  texto={`${usuario?.nombres}`}
+                  texto_secundario={`${usuario?.apellido_paterno} ${usuario?.apellido_materno}`}
+                  imagen={usuario?.imagen}
                 />
                 <TagContainer>
                   <Tag>Ingeniero en Sistemas</Tag>
