@@ -10,12 +10,7 @@ export default function CabeceraProyecto(props){
             <div className="datos">
                 <h2>Proyecto: {nombre}</h2>
                 <p>{descripcion}</p>
-                <div>
-                    <a href={url}>
-                        <Boton>Ver Proyecto</Boton>
-                    </a>
-                    
-                </div>
+
             </div>
             <div className="imagen">
                 <img src={imagen} alt={nombre} />
