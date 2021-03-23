@@ -23,6 +23,7 @@ export const responsive = css`
         justify-content: flex-end;
         padding: 0;
         height: 4rem;
+        
     }
 
     .nav ul{
@@ -56,7 +57,6 @@ export const responsive = css`
     li:hover{
         transition: .3s;
         background-color: ${mainTheme.colores.negroOpacoHover};
-
     }
 
     a{
