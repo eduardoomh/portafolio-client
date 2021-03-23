@@ -1,5 +1,4 @@
 import useEstilos from "../../hooks/useEstilos";
-import Boton from "../reutilizables/Boton";
 
 export default function CabeceraProyecto(props){
     const {nombre, descripcion, imagen, url} = props;
