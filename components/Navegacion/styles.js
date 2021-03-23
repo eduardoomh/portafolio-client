@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'
 import mainTheme from "../../styles/mainTheme";
-import responsive from "./responsive";
+import styleResponsive from "./styleResponsive";
 
 export const styles = css`
 
@@ -69,7 +69,7 @@ export const styles = css`
 
 
         }
-        ${responsive}
+        ${styleResponsive}
     ` ;
 
 export default styles;
