@@ -1,77 +1,74 @@
-import useEstilos from "../../hooks/useEstilos";
+import css from 'styled-jsx/css'
+import mainTheme from "../../styles/mainTheme";
 
-export default function Responsive(){
-    const {estilos} = useEstilos();
-    
-    return(
-        <style jsx>{`
-   
-        @media (min-width: 500px) {
+export const responsive = css`
 
-            .nav{
-                max-width: 10px;
-            }
+    @media (min-width: 500px) {
 
-            .header{
-                display: grid;
-                grid-template-columns: 10rem 1fr;
-                grid-template-rows: 1fr;
-                min-height: 4rem;
-                }
+    .nav{
+        max-width: 10px;
+    }
 
-            .nav{
-                grid-row: 1/2;
-                grid-column: 2/3;
-                display: flex;
-                justify-content: flex-end;
-                padding: 0;
-                height: 4rem;
-            }
-
-            .nav ul{
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                min-width: 30rem;
-                font-size: 1.2rem;
-                letter-spacing: 1px;
-                margin: 0;
-                padding: 0;
-            }
-
-
-            .movil-menu{
-                display: none;
-            }
-
-            li{
-            display: flex;
-            align-items: center;
-            padding: 0 1rem; 
-            list-style: none;
-            min-height: 3rem;
-            color: white;
-            margin: 0;
-            min-height: 100%;
+    .header{
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 1fr;
+        min-height: 4rem;
         }
 
-        li:hover{
-                transition: .3s;
-                background-color: ${estilos.colores.negroOpacoHover};
+    .nav{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        height: 4rem;
+    }
 
-        }
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 30rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 0;
+    }
 
-        a{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 4rem;
-            padding: 1.2rem 0;
-        }
 
-            
-            }
-    `}</style>
-    )
-}
+    .movil-menu{
+        display: none;
+    }
+
+    li{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem; 
+    list-style: none;
+    min-height: 3rem;
+    color: white;
+    margin: 0;
+    min-height: 100%;
+    }
+
+    li:hover{
+        transition: .3s;
+        background-color: ${mainTheme.colores.negroOpacoHover};
+
+    }
+
+    a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4rem;
+    padding: 1.2rem 0;
+    }
+
+
+    }
+    ` ;
+
+export default responsive;

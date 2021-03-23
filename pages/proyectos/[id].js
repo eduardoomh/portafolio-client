@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import useEstilos from "../../hooks/useEstilos";
 import { OBTENER_PROYECTO } from "../../graphql/querys/proyecto";
-import LayoutBasico from "../../components/layout/LayoutBasico";
+import LayoutBasico from "../../components/layout/basico";
 import CabeceraProyecto from "../../components/reutilizables/CabeceraProyecto";
 
 export default function Proyecto() {

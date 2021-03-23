@@ -2,10 +2,9 @@ import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import usePerfil from "../hooks/usePerfil";
 import { OBTENER_CONOCIMIENTOS, OBTENER_CONOCIMIENTOS_SECUNDARIOS } from "../graphql/querys/conocimiento";
-import LayoutBasico from "../components/layout/LayoutBasico";
+import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
 import ElementList from "../components/reutilizables/ElementList";
-import BotonContainer from "../components/reutilizables/BotonContainer";
 
 export default function Conocimientos() {
     const { data, loading } = useQuery(OBTENER_CONOCIMIENTOS);
@@ -37,7 +36,6 @@ export default function Conocimientos() {
                                     data={dataSecundarios?.obtenerConocimientosSecundarios}
                                     tipo="Secundarios"
                                 />
-                                <BotonContainer ruta="/proyectos" texto="Mis Proyectos" />
 
                             </>
                         )

@@ -6,7 +6,7 @@ export default function Estilos(){
     return(
         <style jsx>{`
             .tag{
-                background-color: ${estilos.colores.negro};
+                background-color: ${estilos.colores.header};
                 color: white;
                 font-size: 1rem;
                 padding: .5rem;

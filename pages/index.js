@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import usePerfil from "../hooks/usePerfil";
-import LayoutBasico from "../components/layout/LayoutBasico";
+import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
 import ContenedorDatosPerfil from "../components/Inicio/ContenedorDatosPerfil"
 import Tag from "../components/Inicio/Tag";

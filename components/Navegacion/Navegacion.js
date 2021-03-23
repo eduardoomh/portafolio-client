@@ -4,9 +4,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { HiOutlineMenu } from "react-icons/hi";
 import useWindowSize from "../../hooks/useWindowSize";
-import Estilos from "./Estilos";
-import Responsive from "./Responsive";
- 
+import styles from "./styles";
+
 export default function Navegacion() {
     const [navShow, setNavShow] = useState(true);
     const size = useWindowSize();
@@ -27,18 +26,19 @@ export default function Navegacion() {
 
     return (
         <>
-            <header className="header">
+            <header>
                 <div className="div-img">
                     <Image
                         src="/logoMH.svg"
                         alt="Picture of the author"
-                        width={130}
-                        height={70}
-                    />         
+                        width={120}
+                        height={54}
+                    />
+                
                 </div>
                 <div className="movil-menu">
-                    <HiOutlineMenu size={36} color="white" onClick={() => abrirMenu()} />
-                </div>
+                    <HiOutlineMenu size={28} color="white" onClick={() => abrirMenu()} />   
+                </div> 
                 {
                     navShow !== false ? (
                         <nav className="nav">
@@ -72,8 +72,10 @@ export default function Navegacion() {
                 }
 
             </header>
-            <Estilos />
-            <Responsive />
+            <style jsx>{styles}
+            </style>
+
+           
         </>
     )
 }

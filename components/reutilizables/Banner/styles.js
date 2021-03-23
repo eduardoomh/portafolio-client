@@ -1,6 +1,6 @@
-export default function Estilos(){
-    return(    
-        <style jsx>{`
+import css from "styled-jsx/css";
+
+    const styles = css`    
             .cabecera{
                 display: grid;
                 grid-template-columns: 1fr;
@@ -33,20 +33,6 @@ export default function Estilos(){
                 margin-top: -95px;
                 
             }
+`;
 
-            .cabecera_banner .avatar img{
-                animation-name: avatar;
-                animation-duration: 4s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate-reverse;
-            }
-
-            @keyframes avatar {
-                from {
-                transform: scale(1.1,1.1);
-                }
-            }
-
-    `}</style>
-    )
-}
+export default styles;

@@ -25,13 +25,14 @@ export default function Estilos(){
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate-reverse;
-                animation-name: flecha
+                animation-name: flecha;
             }
 
             @keyframes flecha {
                 from {
                   transform: translatey(20px);
                 }
+            }
 
 
         `}</style>

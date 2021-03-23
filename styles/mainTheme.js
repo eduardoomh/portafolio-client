@@ -3,7 +3,7 @@
     primary: 'Radley serif'
   },
   colores: {
-    negro: '#2E2F31',
+    header: '#274873',
     blanco: '#FFFFF',
     grisClaro: 'rgba(202, 202, 202, .1)',
     grisClaroSecundario: "rgba(213, 170, 170, 0.1)",
@@ -16,7 +16,7 @@
     bordeGrisOscuro: "#DBC2C2",
     bordeGrisSecundario: '#BCB1B1',
     bordeNegro: '#989898',
-    letraNegra: '#3C3838',
+    letraNegra: '#3C3838', 
     letraRojiza: '#814E4E',
     letraRojizaSecundaria: '#773636',
     letraRojizaFuerte: '#B73E3E',

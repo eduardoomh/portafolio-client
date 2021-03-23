@@ -1,23 +1,20 @@
-import Navegacion from "../Navegacion";
-import Footer from "../reutilizables/Footer";
+import Navegacion from "../../Navegacion";
+import Footer from "../../reutilizables/footer";
+import styles from "./styles";
 
 export default function LayoutBasico(props){
     const {children} = props;
 
     return(
         <>
-            <div className="container">
+            <div>
                 <Navegacion />
                 <main>
                     {children}
                 </main>
                 <Footer />
             </div>
-            <style jsx>{`
-                .container main{
-                    padding-top: 4rem;
-                }
-                `}</style>
+            <style jsx>{styles}</style>
         </>
     )
 }

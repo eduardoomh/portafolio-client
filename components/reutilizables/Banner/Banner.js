@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
 import useWindowSize from "../../../hooks/useWindowSize";
-import Avatar from "../Avatar";
-import TextoBanner from "../TextoBanner";
-import Estilos from "./Estilos";
+import FotoPerfil from "../FotoPerfil";
+import Titulo from "../Titulo";
+import styles from "./styles";
 
 export default function Banner(props) {
     const [movil, setMovil] = useState(false);
@@ -25,18 +25,18 @@ export default function Banner(props) {
                        
                     </div>
                     <div className="avatar">
-                        <Avatar imagen={imagen} width={140} height={140} />
+                        <FotoPerfil imagen={imagen} width={140} height={140} />
                     </div>
                      
                 </div>
-                <TextoBanner
+                <Titulo
                     texto={texto}
                     texto_secundario={texto_secundario}
                     descripcion={descripcion}
                  />
 
             </div>
-            <Estilos />
+            <style jsx>{styles}</style>
         </>
     )
 }
