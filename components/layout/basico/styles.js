@@ -6,6 +6,14 @@ const styles = css`
             padding-top: 3rem;
         }
     }
+    @media (min-width: 600px){
+        div{
+            main{
+                margin: auto;
+                width: 1078px;
+            }
+        }
+    }
 `;
 
 export default styles;

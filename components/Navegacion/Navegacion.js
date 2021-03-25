@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { HiOutlineMenu } from "react-icons/hi";
 import useWindowSize from "../../hooks/useWindowSize";
 import styles from "./styles";
+import styleResponsive from "./styleResponsive";
+import Popup from 'reactjs-popup';
 
 export default function Navegacion() {
     const [navShow, setNavShow] = useState(true);
@@ -17,7 +19,7 @@ export default function Navegacion() {
     }
 
     useEffect(() => {
-        if (size.width >= 500) {
+        if (size.width >= 600) {
             setNavShow(true)
         } else {
             setNavShow(false);
@@ -31,14 +33,12 @@ export default function Navegacion() {
                     <Image
                         src="/logoMH.svg"
                         alt="Picture of the author"
-                        width={120}
-                        height={54}
+                        width={navShow ? 95 : 120}
+                        height={navShow ? 40 : 54}
                     />
-                
+
                 </div>
-                <div className="movil-menu">
-                    <HiOutlineMenu size={28} color="white" onClick={() => abrirMenu()} />   
-                </div> 
+
                 {
                     navShow !== false ? (
                         <nav className="nav">
@@ -67,15 +67,52 @@ export default function Navegacion() {
                         </nav>
 
                     ) : (
-                        ""
+                        <div className="movil-menu">
+                            <Popup
+                                trigger={
+
+                                    <button >
+                                        <HiOutlineMenu size={28} color="white" />
+                                    </button>
+                                }
+                                position="top left"
+                                on={['click']}
+                                arrow='center center'
+                                closeOnDocumentClick
+                                keepTooltipInside=".movil-menu"
+                            >
+                                <ul className="popup">
+                                    <li className={router.pathname === "/" ? "seleccionado" : ""}>
+                                        <Link href="/">
+                                            <a>Inicio</a>
+                                        </Link>
+                                    </li>
+                                    <li className={router.pathname === "/conocimientos" ? "seleccionado" : ""}>
+                                        <Link href="/conocimientos">
+                                            <a>Conocimientos</a>
+                                        </Link>
+                                    </li>
+                                    <li className={router.pathname === "/proyectos" ? "seleccionado" : ""}>
+                                        <Link href="/proyectos">
+                                            <a>Proyectos</a>
+                                        </Link>
+                                    </li>
+                                    <li className={router.pathname === "/mejoras" ? "seleccionado" : ""}>
+                                        <Link href="/mejoras">
+                                            <a>Mejoras</a>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </Popup>
+                        </div>
                     )
                 }
 
             </header>
-            <style jsx>{styles}
-            </style>
+            <style jsx>{styles}</style>
+            <style jsx>{styleResponsive}</style>
 
-           
+
         </>
     )
 }

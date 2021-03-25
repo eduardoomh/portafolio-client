@@ -3,39 +3,48 @@ import mainTheme from "../../styles/mainTheme";
 
 export const styleResponsive = css`
 
-    @media (min-width: 500px) {
+    @media (min-width: 600px) {
 
     .nav{
         max-width: 10px;
     }
 
-    .header{
+    header{
         display: grid;
         grid-template-columns: 10rem 1fr;
         grid-template-rows: 1fr;
-        min-height: 4rem;
+        min-height: 3.5rem;
+        padding: 0 9rem !important;
         }
 
     .nav{
-        grid-row: 1/2;
-        grid-column: 2/3;
+        grid-row: 1/2 !important;
+        grid-column: 2/3 !important;
         display: flex;
         justify-content: flex-end;
         padding: 0;
-        height: 4rem;
+        margin: 0 !important;
+        height: 3.5rem;
         
     }
 
     .nav ul{
         display: flex;
-        flex-direction: row;
+        flex-direction: row !important;
         justify-content: flex-end;
         align-items: center;
         min-width: 30rem;
-        font-size: 1.2rem;
+        min-height: 3.5rem !important;
+        max-height: 3.5rem !important;
         letter-spacing: 1px;
         margin: 0;
         padding: 0;
+    }
+
+    .div-img{
+        display: flex;
+        align-items: center;
+        margin: .3rem 0 !important;
     }
 
 
@@ -44,28 +53,32 @@ export const styleResponsive = css`
     }
 
     li{
-    display: flex;
-    align-items: center;
-    padding: 0 1rem; 
-    list-style: none;
-    min-height: 3rem;
-    color: white;
-    margin: 0;
-    min-height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem; 
+        padding-top: .3rem;
+        list-style: none;
+        min-height: 3.5rem !important;
+        max-height: 3.5rem !important;
+        color: white;
+        margin: 0;
+        min-height: 100%;
+        font-size: 1.2rem !important;
     }
 
     li:hover{
         transition: .3s;
-        background-color: ${mainTheme.colores.negroOpacoHover};
+        background-color: #11396d;
     }
 
     a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 4rem;
-    padding: 1.2rem 0;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.5rem;
+        padding: 0;
+        margin: 0;
+    }   
 
 
     }

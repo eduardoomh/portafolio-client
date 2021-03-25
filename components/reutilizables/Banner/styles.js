@@ -1,37 +1,70 @@
 import css from "styled-jsx/css";
+import mainTheme from "../../../styles/mainTheme";
 
     const styles = css`    
-            .cabecera{
+            .banner{
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows:1.3fr 12rem;
+                grid-template-rows:1fr 2fr;
+                height: 17.5rem;
+                background-color: #FFD464;
+
+                h1{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    font-family: "Radley";
+                    font-size: 32px;
+                }
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+
+                .perfil{
+                    margin-top: 1.5rem;
+                }
 
             }
 
-            .cabecera_banner{
-                background-image: url("https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif");
-                background-size: 100%;
-                height: 12rem;
-                background-repeat: no-repeat;
-                z-index: 4;
-            }
+            @media (min-width: 600px){
+                .banner{
+                    grid-template-rows: 1fr 1fr;
 
-            .cabecera_banner .filtro{
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                min-height: 12rem;
-                width: 100%;
-                background-color: #4cd2e4;
-                opacity: .2;
-            }
+                    .perfil{
+                        display: flex;
+                        justify-content: flex-start;
+                        padding-left: 5rem;
+                        margin-top: -2rem;
 
-            .cabecera_banner .avatar{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: -95px;
-                
+                    }
+
+                    .web{
+                        width: 100%;
+                        height: 4rem;
+                        border: 1px solid #D6D1D1;
+                        background-color: white;
+                        margin-top: -3rem;
+                        z-index: 5;
+                        box-shadow: ${mainTheme.colores.sombra};
+
+                        ul{
+                            display: flex;
+                            gap: 1rem;
+                            list-style: none;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                        }
+
+                    }
+
+                    h1{
+                        font-size: 40px;
+                    }
+                }
             }
 `;
 

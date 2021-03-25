@@ -1,7 +1,7 @@
 
 export default function FotoPerfil(props){
     const {imagen, width, height} = props;
-    
+     
     return(
         <>
             <img src={imagen} width={width} height={height} />
@@ -22,6 +22,18 @@ export default function FotoPerfil(props){
                 transform: scale(1.1,1.1);
                 }
             }
+
+            @media (min-width: 600px){
+                img{
+                    animation-name: none;
+                    transition: .5s;
+
+                    &:hover{
+                            transform: scale(1.1,1.1);
+                        }
+                }
+            }
+            
             `}</style>
         </>
     )

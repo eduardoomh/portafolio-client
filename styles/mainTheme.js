@@ -23,7 +23,7 @@
     negroOpaco: '#2E2F31',
     negroOpacoHover: '#363739',
     blancoLetras: '#FFF',
-    sombra: '0 4px 8px 0 rgba(0,0,0,0.2)',
+    sombra: '0 2px 4px 0 rgba(0,0,0,0.2)',
     sombraHover: '0 8px 16px 0 rgba(0,0,0,0.2)',
     azulClaro: '#69D6EE'
 

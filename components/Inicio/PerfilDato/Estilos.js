@@ -28,7 +28,7 @@ export default function Estilos(){
     
             font-size: 2rem;
             font-family: 'Noto Sans', sans-serif;
-            color: ${estilos.colores.negro};
+            color: ${estilos?.colores?.negro};
         }
 
     `}</style>

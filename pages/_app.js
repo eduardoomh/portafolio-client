@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() =>{
     recuperarUsuario();
+    obtenerEstilos();
   
 
   }, []);
@@ -25,6 +26,12 @@ function MyApp({ Component, pageProps }) {
         console.log(response.data)
         setUsuario(response.data.obtenerUsuario)
       })
+  }
+
+  const obtenerEstilos = () => {
+    if(mainTheme.length > 0){
+      setEstilos(mainTheme);
+    }
   }
 
   const cambiarEstilos = (value) => {

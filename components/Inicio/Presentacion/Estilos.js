@@ -7,7 +7,7 @@ export default function Estilos(){
                 justify-content: center;
                 align-items: center;
                 padding: 1rem;
-                margin-top: 1rem;
+                margin-top: 2rem;
 
             }
 
@@ -33,6 +33,12 @@ export default function Estilos(){
                   transform: translatey(20px);
                 }
             }
+            @media (min-width: 600px){
+                .presentacion{
+                    margin-top: 4rem;
+                }
+            }
+        
 
 
         `}</style>

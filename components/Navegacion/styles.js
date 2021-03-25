@@ -1,6 +1,5 @@
 import css from 'styled-jsx/css'
 import mainTheme from "../../styles/mainTheme";
-import styleResponsive from "./styleResponsive";
 
 export const styles = css`
 
@@ -29,7 +28,14 @@ export const styles = css`
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+
+                button{
+                    background-color: transparent;
+                    border: none;
+                }
+
             }
+
 
             .nav{
                 transition: .3s;
@@ -69,7 +75,9 @@ export const styles = css`
 
 
         }
-        ${styleResponsive}
+
+        
+
     ` ;
 
 export default styles;
