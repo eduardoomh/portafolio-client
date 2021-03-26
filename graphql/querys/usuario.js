@@ -14,11 +14,21 @@ export const OBTENER_USUARIO = gql`
             github
             edad
             imagen
-            descripcion
-            experiencia
-            estudios
-            personalidad
-            pasatiempos
+            descripcion{
+                texto
+            }
+            experiencia{
+                texto
+            }
+            estudios{
+                texto
+            }
+            personalidad{
+                texto
+            }
+            pasatiempos{
+                texto
+            }
             telefono
             updatedAt
             createdAt

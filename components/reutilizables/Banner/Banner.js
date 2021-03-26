@@ -38,6 +38,14 @@ export default function Banner(props) {
                             <ul>
                                 {children}
                             </ul>
+                            <div className="github">
+                                <img 
+                                    src="https://image.flaticon.com/icons/png/512/25/25231.png" 
+                                    alt="github.com/eduardoomh"
+                                    width={32}
+                                    height={32}
+                                />
+                            </div>
                             
                         </div>
                     )

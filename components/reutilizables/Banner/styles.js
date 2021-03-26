@@ -59,6 +59,16 @@ import mainTheme from "../../../styles/mainTheme";
                             font-weight: bold;
                         }
 
+                        .github{
+                            position: absolute;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            min-height: 4rem !important;
+                            width:1078px;
+                            padding-right: 2rem;
+                        }
+
                     }
 
                     h1{

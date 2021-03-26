@@ -37,6 +37,10 @@ export default function Estilos(){
                 .presentacion{
                     margin-top: 4rem;
                 }
+
+                .presentacion p{
+                    font-size: 1.6rem;
+                }
             }
         
 

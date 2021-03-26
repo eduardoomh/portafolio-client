@@ -7,6 +7,7 @@ export const styleResponsive = css`
 
     .nav{
         max-width: 10px;
+        max-height: 3.5rem;
     }
 
     header{

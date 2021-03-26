@@ -3,8 +3,8 @@ import Link from "next/link"
 import usePerfil from "../hooks/usePerfil";
 import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
-import ContenedorDatosPerfil from "../components/Inicio/ContenedorDatosPerfil"
 import Presentacion from "../components/Inicio/Presentacion";
+import ParrafoArray from "../components/reutilizables/ParrafoArray";
 
 export default function Home() {
   const { usuario } = usePerfil();
@@ -28,23 +28,45 @@ export default function Home() {
             (
               <>
                 <Banner
-                  texto={`${usuario?.nombres}`}
-                  texto_secundario={`${usuario?.apellido_paterno} ${usuario?.apellido_materno}`}
                   imagen={usuario?.imagen}
                 >
                   <>
-                      <li><Link href="#"><a>Quien Soy</a></Link></li>
-                      <li>Experiencia</li>
-                      <li>Estudios</li>
-                      <li>Personalidad</li>
-                      <li>Pasatiempos</li>
+                      <li><Link href="#quien_soy"><a>Quien Soy</a></Link></li>
+                      <li><Link href="#experiencia"><a>Experiencia</a></Link></li>
+                      <li><Link href="#estudios"><a>Estudios</a></Link></li>
+                      <li><Link href="#personalidad"><a>Personalidad</a></Link></li>
+                      <li><Link href="#pasatiempos"><a>Pasatiempos</a></Link></li>
                     </>
                 
                 </Banner>
                 <Presentacion>
-                  Llevar mis ideas a codigo es la mayor satisfaccion que puede haber.
+                  "Llevar mis ideas a codigo es la mayor satisfaccion que puede haber."
                 </Presentacion>
-                <ContenedorDatosPerfil usuario={usuario} />
+                <ParrafoArray 
+                  titulo="Quien Soy?"
+                  parrafos={usuario?.descripcion}
+                  id="quien_soy"
+                />
+                <ParrafoArray 
+                  titulo="Experiencia"
+                  parrafos={usuario?.experiencia}
+                  id="experiencia"
+                />
+                <ParrafoArray 
+                  titulo="Estudios"
+                  parrafos={usuario?.estudios}
+                  id="estudios"
+                />
+                <ParrafoArray 
+                  titulo="Personalidad"
+                  parrafos={usuario?.personalidad}
+                  id="personalidad"
+                />
+                <ParrafoArray 
+                  titulo="Pasatiempos"
+                  parrafos={usuario?.pasatiempos}
+                  id="pasatiempos"
+                />
               </>
             )
         }
