@@ -61,8 +61,8 @@ function MyApp({ Component, pageProps }) {
       <ApolloProvider client={client}>
         <estilosContext.Provider value={estilosInfo}>
           <usuarioContext.Provider value={usuarioInfo}>
-            <LayoutBasico>
-              <Component {...pageProps} />
+            <LayoutBasico isUser={usuario !== undefined ? true : false}>
+              <Component {...pageProps}   />
             </LayoutBasico>
           </usuarioContext.Provider>
         </estilosContext.Provider>
