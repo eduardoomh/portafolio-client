@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from "next/link"
 import usePerfil from "../hooks/usePerfil";
-import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
 import Presentacion from "../components/Inicio/Presentacion";
 import ParrafoArray from "../components/reutilizables/ParrafoArray";
@@ -17,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <LayoutBasico>
+      <>
         {
           !usuario ? (
             <div>
@@ -70,7 +69,7 @@ export default function Home() {
               </>
             )
         }
-      </LayoutBasico>
+      </>
       <style jsx>{`
           li{
             &:hover{

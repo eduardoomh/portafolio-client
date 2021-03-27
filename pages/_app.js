@@ -4,6 +4,7 @@ import {client} from "../graphql/apollo";
 import {OBTENER_USUARIO} from "../graphql/querys/usuario";
 import usuarioContext from "../context/usuarioContext";
 import estilosContext from "../context/estilosContext";
+import LayoutBasico from "../components/layout/basico";
 import mainTheme from "../styles/mainTheme";
 import darkTheme from "../styles/darkTheme";
 import '../styles/globals.css'
@@ -60,7 +61,9 @@ function MyApp({ Component, pageProps }) {
       <ApolloProvider client={client}>
         <estilosContext.Provider value={estilosInfo}>
           <usuarioContext.Provider value={usuarioInfo}>
-            <Component {...pageProps} />
+            <LayoutBasico>
+              <Component {...pageProps} />
+            </LayoutBasico>
           </usuarioContext.Provider>
         </estilosContext.Provider>
         

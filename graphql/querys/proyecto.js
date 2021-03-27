@@ -57,3 +57,33 @@ export const OBTENER_PROYECTO = gql`
     }
 }
 `
+export const PROYECTO_DATOS_FRAGMENT = gql`
+
+    fragment proyectoDatos on Proyecto {
+            id
+            nombre
+            descripcion
+            imagen
+        }
+`;
+
+export const OBTENER_LISTA_PROYECTOS = gql`
+    query obtenerListaProyectos($tipo1: EstadoProyectoEnum! $tipo2:EstadoProyectoEnum!){
+    obtenerListaProyectos(tipo1: $tipo1 tipo2: $tipo2){
+        datos{
+        proyectos
+        nota_proyectos
+        }
+        proyectos_terminados(estado: $tipo1){
+                ...proyectoDatos
+        }
+        proyectos_pendientes(estado:$tipo2){
+        ...proyectoDatos
+        }
+    }
+
+
+    }
+    
+    ${PROYECTO_DATOS_FRAGMENT}
+`;

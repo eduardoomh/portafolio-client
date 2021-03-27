@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import usePerfil from "../hooks/usePerfil";
 import { OBTENER_CONOCIMIENTOS, OBTENER_CONOCIMIENTOS_SECUNDARIOS } from "../graphql/querys/conocimiento";
-import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
 import ElementList from "../components/reutilizables/ElementList";
 
@@ -17,7 +16,7 @@ export default function Conocimientos() {
                 <title>Conocimientos - JesusMH</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <LayoutBasico>
+            <>
                 <Banner
                     texto="Conocimientos"
                     descripcion="Aqui estan todos los conocimientos que tengo."
@@ -41,7 +40,7 @@ export default function Conocimientos() {
                         )
                 }
 
-            </LayoutBasico>
+            </>
         </>
     )
 }

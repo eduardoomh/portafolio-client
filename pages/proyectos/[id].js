@@ -3,7 +3,6 @@ import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import useEstilos from "../../hooks/useEstilos";
 import { OBTENER_PROYECTO } from "../../graphql/querys/proyecto";
-import LayoutBasico from "../../components/layout/basico";
 import CabeceraProyecto from "../../components/reutilizables/CabeceraProyecto";
 
 export default function Proyecto() {
@@ -23,7 +22,7 @@ export default function Proyecto() {
                 <title>Jesus EMH - Proyecto</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <LayoutBasico>
+            <>
                 <CabeceraProyecto
                     nombre={data?.obtenerProyecto.nombre || "cargando"}
                     descripcion={data?.obtenerProyecto.descripcion || "cargando"}
@@ -67,7 +66,7 @@ export default function Proyecto() {
                 </ul>
 
 
-            </LayoutBasico>
+            </>
 
             <style jsx>{`
 

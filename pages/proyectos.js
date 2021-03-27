@@ -3,7 +3,6 @@ import Head from "next/head";
 import {useQuery} from "@apollo/client";
 import usePerfil from "../hooks/usePerfil";
 import {OBTENER_PROYECTOS, OBTENER_PROYECTOS_TERMINADOS} from "../graphql/querys/proyecto";
-import LayoutBasico from "../components/layout/basico";
 import Banner from "../components/reutilizables/Banner";
 import ProyectosList from "../components/reutilizables/ProyectosList";
 
@@ -25,7 +24,7 @@ export default function Proyectos(){
                 <title>Proyectos - JesusMH</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <LayoutBasico>
+            <>
             <Banner
                 texto="Proyectos"
                 descripcion="Aqui estan los proyectos en los que estoy trabajando."
@@ -52,7 +51,7 @@ export default function Proyectos(){
                 }
 
      
-            </LayoutBasico>
+            </>
         </>
     )
 }
