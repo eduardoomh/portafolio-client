@@ -8,6 +8,7 @@ import mainTheme from "../../../styles/mainTheme";
                 grid-template-rows:1fr 2fr;
                 height: 17.5rem;
                 background-color: #FFD464;
+                margin-bottom: 2.5rem;
 
                 h1{
                     display: flex;
@@ -33,6 +34,7 @@ import mainTheme from "../../../styles/mainTheme";
             @media (min-width: 600px){
                 .banner{
                     grid-template-rows: 1fr 1fr;
+                    margin-bottom: 5rem;
 
                     .perfil{
                         display: flex;
@@ -43,6 +45,9 @@ import mainTheme from "../../../styles/mainTheme";
                     }
 
                     .web{
+                        display: grid;
+                        grid-template-columns: 13rem 1fr 4rem;
+                        grid-template-rows: 1fr;
                         width: 100%;
                         height: 4rem;
                         border: 1px solid #D6D1D1;
@@ -52,6 +57,8 @@ import mainTheme from "../../../styles/mainTheme";
                         box-shadow: ${mainTheme.colores.sombra};
 
                         ul{
+                            grid-column: 2/3;
+                            grid-row: 1/2;
                             display: flex;
                             gap: 1rem;
                             list-style: none;
@@ -60,13 +67,13 @@ import mainTheme from "../../../styles/mainTheme";
                         }
 
                         .github{
-                            position: absolute;
+                            grid-column: 3/4;
+                            grid-row: 1/2;                 
                             display: flex;
-                            justify-content: flex-end;
+                            justify-content: center;
                             align-items: center;
                             min-height: 4rem !important;
-                            width:1078px;
-                            padding-right: 2rem;
+                 
                         }
 
                     }

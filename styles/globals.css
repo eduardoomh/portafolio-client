@@ -25,3 +25,9 @@ a {
     height: 6rem;
 
   }
+
+.submenu > li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    
+}

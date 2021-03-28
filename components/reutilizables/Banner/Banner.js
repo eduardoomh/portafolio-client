@@ -35,7 +35,7 @@ export default function Banner(props) {
                 {
                     !movil && (
                         <div className="web">
-                            <ul>
+                            <ul className="submenu">
                                 {children}
                             </ul>
                             <div className="github">

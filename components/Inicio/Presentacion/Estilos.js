@@ -35,7 +35,7 @@ export default function Estilos(){
             }
             @media (min-width: 600px){
                 .presentacion{
-                    margin-top: 4rem;
+                    margin-top: 0;
                 }
 
                 .presentacion p{

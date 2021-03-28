@@ -1,12 +1,11 @@
 import styles from "./styles";
 
-export default function Titulo(props){
+export default function Parrafo(props){
     const {titulo, descripcion} = props;
-
-    return( 
+    return(
         <>
             <div>
-                <h1>{titulo}</h1>
+                <h3>{titulo}</h3>
                 <p>{descripcion}</p>
             </div>
             <style jsx>{styles}</style>

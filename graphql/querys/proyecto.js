@@ -64,6 +64,10 @@ export const PROYECTO_DATOS_FRAGMENT = gql`
             nombre
             descripcion
             imagen
+            tecnologias_principales{
+                nombre
+                imagen
+            }
         }
 `;
 

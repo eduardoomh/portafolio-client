@@ -70,14 +70,6 @@ export default function Home() {
             )
         }
       </>
-      <style jsx>{`
-          li{
-            &:hover{
-              cursor: pointer;
-              text-decoration: underline;
-            }
-          }
-        `}</style>
 
     </>
   )
