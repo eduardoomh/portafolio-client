@@ -7,30 +7,14 @@ const styles = css`
             min-height: 100vh;
 
             .loading{
+                flex-direction: column;
+                justify-content: flex-start;
                 min-height: 100vh;
-                max-height: 100vh;
+                max-height: 120vh;
                 min-width: 100vw;
                 max-width: 100vw;
                 text-align: center;
                 padding: 1rem;
-
-                div{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 12rem;
-                    background-color: #f7f2f2;
-                    border-radius: 6px;
-                    margin-top: 1rem;
-
-                    p{
-                        font-family: "Noto sans";
-                        color: #ac9595;
-                        font-size: 1.2rem;
-                    }
-
-                }
-
 
 
             }
@@ -48,12 +32,11 @@ const styles = css`
                 width: 1078px;
 
                 .loading{
+                    flex-direction: column;
+                    justify-content: flex-start;
                     min-width: 1078px;
                     max-width: 1078px;
 
-                    div{
-                        height: 16rem;
-                    }
                 }
             }
         }
