@@ -3,7 +3,7 @@ const darkTheme = {
     primary: 'Radley serif'
   },
   colores: {
-    header: '##274873ed',
+    header: '#FCFAFA',
     blanco: '#FFFFF',
     grisClaro: 'rgba(202, 202, 202, .1)',
     grisClaroSecundario: "rgba(213, 170, 170, 0.1)",

@@ -7,8 +7,9 @@ import mainTheme from "../../../styles/mainTheme";
                 grid-template-columns: 1fr;
                 grid-template-rows:1fr 2fr;
                 height: 17.5rem;
-                background-color: #FFD464;
+                background-image: var(--secondary);
                 margin-bottom: 2.5rem;
+                margin-top: .9rem;
 
                 h1{
                     display: flex;
@@ -17,6 +18,7 @@ import mainTheme from "../../../styles/mainTheme";
                     text-align: center;
                     font-family: "Radley";
                     font-size: 32px;
+                    color: var(--black);
                 }
 
                 div{
@@ -35,12 +37,42 @@ import mainTheme from "../../../styles/mainTheme";
                 .banner{
                     grid-template-rows: 1fr 1fr;
                     margin-bottom: 5rem;
+                    padding: 0;
+                    border-radius: 0 0 10px 10px;
+
+                    .banner__name{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 7rem;
+                        height: 306px;
+                        
+                        padding: 0;
+
+                        h1{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 32px;
+                            min-height: 100%;
+                            margin: 0;
+                        }
+
+                        div{
+                            grid-row: 2/3;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            min-height: 100%;
+                        }
+
+                    }
+                    
 
                     .perfil{
                         display: flex;
                         justify-content: flex-start;
-                        padding-left: 5rem;
-                        margin-top: -2rem;
+                        padding-left: 2rem;
+                        margin-top: -8.5rem;
 
                     }
 
@@ -50,11 +82,11 @@ import mainTheme from "../../../styles/mainTheme";
                         grid-template-rows: 1fr;
                         width: 100%;
                         height: 4rem;
-                        border: 1px solid #D6D1D1;
-                        background-color: white;
-                        margin-top: -3rem;
+                        border-bottom: 1px solid #B9A6A6;
+                        background-color: transparent;
+                        margin-top: -2.7rem;
                         z-index: 5;
-                        box-shadow: ${mainTheme.colores.sombra};
+                       
 
                         ul{
                             grid-column: 2/3;
@@ -78,9 +110,6 @@ import mainTheme from "../../../styles/mainTheme";
 
                     }
 
-                    h1{
-                        font-size: 40px;
-                    }
                 }
             }
 `;

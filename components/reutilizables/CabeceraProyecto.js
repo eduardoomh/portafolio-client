@@ -25,8 +25,8 @@ export default function CabeceraProyecto(props){
                 min-height: 20rem;
                 margin: 2rem 4rem;
                 padding: 2rem;
-                background-color: ${estilos.colores.grisClaro};
-                border: 1px solid ${estilos.colores.bordeGrisClaro};
+                background-color: gray;
+                border: 1px solid gray;
                 font-family: Radley;
             }
 
@@ -58,7 +58,7 @@ export default function CabeceraProyecto(props){
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: ${estilos.colores.azulClaro};
+                background-color: gray;
             }
 
             .imagen img{

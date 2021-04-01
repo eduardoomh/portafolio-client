@@ -24,11 +24,12 @@ export default function CardProyecto(props){
                     <ul>
                         {
                             tecnologias_principales?.map(t => (
-                                <li><img 
-                                    src={t.imagen} 
-                                    alt={t.nombre} 
-                                    width={40} 
-                                    height={40} 
+                                <li key={t.nombre}>
+                                    <img 
+                                        src={t.imagen} 
+                                        alt={t.nombre} 
+                                        width={40} 
+                                        height={40} 
                                     />
                                 </li>
                             ))

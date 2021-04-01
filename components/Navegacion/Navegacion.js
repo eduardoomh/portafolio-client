@@ -10,13 +10,10 @@ import Popup from 'reactjs-popup';
 
 export default function Navegacion() {
     const [navShow, setNavShow] = useState(true);
+    const [tema, setTema] = useState("");
     const size = useWindowSize();
     console.log(size.width)
     const router = useRouter();
-
-    const abrirMenu = () => {
-        setNavShow(!navShow);
-    }
 
     useEffect(() => {
         if (size.width >= 600) {
@@ -25,6 +22,11 @@ export default function Navegacion() {
             setNavShow(false);
         }
     }, [size]);
+
+    useEffect(() => {
+        setTema(styles);
+
+    },[]);
 
     return (
         <>
@@ -107,9 +109,9 @@ export default function Navegacion() {
                         </div>
                     )
                 }
-
             </header>
-            <style jsx>{styles}</style>
+            
+            <style jsx>{tema}</style>
             <style jsx>{styleResponsive}</style>
 
 

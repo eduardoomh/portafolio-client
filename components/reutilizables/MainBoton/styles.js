@@ -6,13 +6,13 @@ const styles = css`
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 150px;
-        height: 39px;
+        min-width: 142px;
+        height: 46px;
         padding: 1rem;
         background-color: transparent;
         border: 1px solid #413E3E;
         border-radius: 3px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: background-color .1s;
         
         

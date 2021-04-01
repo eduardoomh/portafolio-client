@@ -2,7 +2,7 @@ import css from "styled-jsx/css";
 
 const styles = css`
     .contenedor{
-        padding: 6rem 1rem;
+        padding: 4rem 1rem;
         font-size: "Spectral";
 
         h2{
@@ -18,7 +18,7 @@ const styles = css`
             font-size: 1.2rem;
             margin-top: 2.5rem;
 
-            div{
+            .boton-div{
                 display: flex;
                 justify-content: center;
             }
@@ -37,9 +37,25 @@ const styles = css`
 
             .proyectos{
                 display: grid;
-                grid-template-columns: 22rem 1fr;
+                grid-template-columns: 17rem 1fr;
                 grid-template-rows: 1fr;
                 gap: 1rem;
+
+                div{
+                    display: grid;
+                    grid-template-columns: 17rem 1fr;
+                    min-width: 100% !important;
+                    width: 1000px;
+                    padding-top: 2rem;
+                }
+
+                p{
+                    grid-column: 1/ span 2;
+                    font-family: "Spectral";
+                    font-size: 1.3rem;
+                }
+
+
             }
         }
     }

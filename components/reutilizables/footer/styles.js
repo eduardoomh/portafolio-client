@@ -9,8 +9,8 @@ const styles = css`
         align-items: center;
         height: 35rem;
         padding: 2rem;
-        background-color: ${mainTheme.colores.header};
-        color: ${mainTheme.colores.blancoLetras};
+        background-color: var(--primary);
+        color: white;
         font-family: 'Spectral', serif;
         font-size: 1rem;
 

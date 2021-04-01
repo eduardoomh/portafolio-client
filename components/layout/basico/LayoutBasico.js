@@ -1,18 +1,34 @@
+import {useState, useEffect} from "react";
 import Image from "next/image";
 import Navegacion from "../../Navegacion";
 import Footer from "../../reutilizables/footer";
 import useWindowSize from "../../../hooks/useWindowSize";
-
 import styles from "./styles";
+import {lightVariables, darkVariables} from "./styles";
 
 export default function LayoutBasico(props){
-    const {children, isUser} = props;
+    const [isDark, setIsDark] = useState("");
+    const {children, isUser, dark, setDark} = props;
     const {width} = useWindowSize();
+    console.log(dark)
+
+    const cambiarTema = () => {
+        setDark(!dark);
+        setIsDark(dark ? darkVariables : lightVariables);
+    }
+
+    useEffect(() => {
+        setIsDark(lightVariables);
+    },[]);
+
 
     return(
         <>
             <div>
-                <Navegacion />
+                <div className="navegacion">
+                    <Navegacion />
+                </div>
+                
                 <main>
                     {isUser ? 
                         children 
@@ -44,6 +60,9 @@ export default function LayoutBasico(props){
                 <Footer />
             </div>
             <style jsx>{styles}</style>
+            <style global jsx>{isDark}</style>
+
+            
         </>
     )
 }

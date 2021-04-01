@@ -20,14 +20,16 @@ export default function Banner(props) {
     return (
         <>
             <div className="banner">
-                <h1>Jesus Eduardo <br/>Martinez Hinojosa</h1>
-                <div>
-                    <MainBoton>Visualizar CV</MainBoton>
+                <div className="banner__name">
+                    <h1>Jesus Eduardo <br/>Martinez Hinojosa</h1>
+                    <div>
+                        <MainBoton>Visualizar CV</MainBoton>
+                    </div>
                 </div>
                 <div className="perfil">
                     <FotoPerfil
-                        width={movil ? 130 : 160}
-                        height={movil ? 130 : 160}
+                        width={movil ? 130 : 150}
+                        height={movil ? 130 : 150}
                         imagen={imagen}
                         animate={movil ? true : false}
                      />

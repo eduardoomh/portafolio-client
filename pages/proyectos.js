@@ -7,6 +7,8 @@ import { OBTENER_LISTA_PROYECTOS } from "../graphql/querys/proyecto";
 import Banner from "../components/reutilizables/Banner";
 import Titulo from "../components/reutilizables/Titulo";
 import ListaProyectos from "../components/proyectos/ListaProyectos";
+import Portada from "../components/reutilizables/Portada";
+import Nota from "../components/reutilizables/Nota";
 
 export default function Proyectos() {
     const { data, loading } = useQuery(OBTENER_LISTA_PROYECTOS, {
@@ -29,19 +31,9 @@ export default function Proyectos() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <>
-                <Banner
-                    texto="Proyectos"
-                    descripcion="Aqui estan los proyectos en los que estoy trabajando."
-                    imagen={usuario?.imagen || ""}
-                >
-                    <>
-                        <li><Link href="#terminados"><a>Terminados</a></Link></li>
-                        <li><Link href="#pendientes"><a>Pendientes</a></Link></li>
-                        <li><Link href="#detalles"><a>Detalles</a></Link></li>
-                    </>
-                </Banner>
-                <Titulo
-                    titulo="Mis Proyectos"
+                <Portada 
+                    imagen="/proyectos.svg" 
+                    titulo="Mis Proyectos" 
                     descripcion={data?.obtenerListaProyectos?.datos?.proyectos}
                 />
 
@@ -64,6 +56,9 @@ export default function Proyectos() {
 
                         )
                 }
+                <Nota 
+                    texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                />
 
 
 

@@ -11,7 +11,7 @@ const styles = css`
        
         
         h1{
-            color: #3C3838;
+            color: var(--black);
             font-family: 'Noto Sans', sans-serif;
             padding: 0;
             margin: 0;
@@ -32,13 +32,13 @@ const styles = css`
             padding-left: 2rem;
             
             h1{
-                font-size: 2.5rem;
+                font-size: 40px;
                 
             }
 
             p{
                 padding: 0;
-                font-size: 1.5rem;
+                font-size: 24px;
             }
         }
     }

@@ -21,17 +21,17 @@ export default function ProyectosList(props){
                         :
                         
                         data?.map(d => (
-                            <>
+                            <div key={d.nombre}>
                                 <CardProyecto data={d} key={d.id}/>  
                                 <Parrafo titulo={d.nombre} descripcion={d.descripcion}/>
                                 {
                                     width <= 600 && (
-                                        <div>
+                                        <div className="boton-div">
                                             <MainBoton>Mas Detalle</MainBoton>
                                         </div>
                                     )
                                 }
-                            </>
+                            </div>
                             
                         ))
                     }

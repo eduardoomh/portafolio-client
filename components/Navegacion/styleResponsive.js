@@ -69,7 +69,7 @@ export const styleResponsive = css`
 
     li:hover{
         transition: .3s;
-        background-color: #11396d;
+        text-decoration: underline;
     }
 
     a{

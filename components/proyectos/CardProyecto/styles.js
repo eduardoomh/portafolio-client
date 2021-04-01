@@ -7,7 +7,7 @@ const styles = css`
         grid-template-rows: 5rem 4rem;
         border: 1px solid #DFDFDF;
     
-
+ 
         ul{
             grid-row: 2/3;
             grid-column: 1/2;
@@ -28,7 +28,7 @@ const styles = css`
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #69D6EE;
+            background-color: var(--card-proyecto);
 
             img{
                 border-radius: 50%;
@@ -39,7 +39,7 @@ const styles = css`
     @media (min-width: 600px){
         article{
             grid-template-rows: 5rem 16rem 4rem;
-            max-width: 18rem;
+            max-width: 16rem;
 
             ul{
                 grid-row: 1/2;

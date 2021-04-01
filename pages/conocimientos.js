@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Link from 'next/link';
 import { useQuery } from "@apollo/client";
-import usePerfil from "../hooks/usePerfil";
 import { OBTENER_LISTA_CONOCIMIENTOS } from "../graphql/querys/conocimiento";
-import Banner from "../components/reutilizables/Banner";
-import Titulo from "../components/reutilizables/Titulo"
-
+import Portada from '../components/reutilizables/Portada';
+import Nota from "../components/reutilizables/Nota";
+;
 export default function Conocimientos() {
     const { data, loading } = useQuery(OBTENER_LISTA_CONOCIMIENTOS, {
         variables: {
@@ -13,7 +11,6 @@ export default function Conocimientos() {
             tipo2: "SECUNDARIO"
         }
     });
-    const { usuario } = usePerfil();
 
     return (
         <>
@@ -22,21 +19,12 @@ export default function Conocimientos() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <>
-                <Banner
-                    texto="Conocimientos"
-                    descripcion="Aqui estan todos los conocimientos que tengo."
-                    imagen={usuario?.imagen || ""}
-                >
-                    <>
-                        <li><Link href="#terminados"><a>Principales</a></Link></li>
-                        <li><Link href="#pendientes"><a>Secundarios</a></Link></li>
-                        <li><Link href="#detalles"><a>Detalles</a></Link></li>
-                    </>
-                </Banner>
-                <Titulo 
-                    titulo="Mis Conocimientos"
-                    descripcion={data?.obtenerListaConocimientos.datos.conocimientos}
-                />
+            <Portada 
+                imagen="/conocimientos.svg" 
+                titulo="Mis Conocimientos" 
+                descripcion={data?.obtenerListaConocimientos.datos.conocimientos}
+            />
+
                 {
                     loading
                         ? <p>cargando</p>
@@ -47,6 +35,9 @@ export default function Conocimientos() {
                             </>
                         )
                 }
+                <Nota 
+                    texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                />
 
             </>
         </>

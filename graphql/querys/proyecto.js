@@ -38,6 +38,7 @@ export const OBTENER_PROYECTO = gql`
         descripcion
         imagen
         url
+        fecha
         tecnologias_principales{
             nombre
             imagen
