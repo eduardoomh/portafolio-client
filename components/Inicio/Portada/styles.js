@@ -92,6 +92,9 @@ const styles  = css`
                 }
 
                 #social-media{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         border-bottom: none;
                     }
 
