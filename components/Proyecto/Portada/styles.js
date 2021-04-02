@@ -102,6 +102,7 @@ const styles = css`
                 grid-row: 3/4;
                 padding: 0;
                 font-size: 1.3rem;
+                text-align: left;
             }
 
             .boton-contenedor{
