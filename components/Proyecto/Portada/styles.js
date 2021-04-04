@@ -4,7 +4,7 @@ const styles = css`
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 430px 1fr;
+        grid-template-rows: 350px 1fr;
         width: 100vw;
         max-width: 100vw;
         margin-bottom: 4rem;
@@ -18,7 +18,7 @@ const styles = css`
         .user-image{
             border-radius: 50%;
             position: absolute;
-            left: 50px;
+            left: 20px;
             top: 75px;
         }
 

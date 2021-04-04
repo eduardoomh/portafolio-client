@@ -13,9 +13,9 @@ export default function Portada(props){
             <div className="container">
                 <div className="imagen">
                     <Image 
-                        src={width >= 600  ? "/proyecto.svg" : "/proyecto_movil.svg"} 
-                        width={width >= 600 ? 345 : 360} 
-                        height={width >= 600 ? 345 : 360}
+                        src="/proyecto.svg" 
+                        width={width >= 600 ? 345 : 300} 
+                        height={width >= 600 ? 345 : 300}
                         alt="proyecto_card"
                     />
                     <img 
