@@ -7,7 +7,7 @@ const styles = css`
         grid-template-rows:.3fr 1fr;
         margin-bottom: 2rem;
         gap: 0;
-        border-left: 10px solid #06FFB4; 
+        border-left: 10px solid var(--secondary); 
         margin-left: 1rem;
 
         .avatar{
@@ -32,7 +32,7 @@ const styles = css`
             justify-content: flex-start;
             align-items: center;
             margin: 0;
-            border-left: 0 solid red;;
+            border-left: 0 solid red;
 
         }
 

@@ -10,7 +10,6 @@ export default function LayoutBasico(props){
     const [isDark, setIsDark] = useState("");
     const {children, isUser, dark, setDark} = props;
     const {width} = useWindowSize();
-    console.log(dark)
 
     const cambiarTema = () => {
         setDark(!dark);

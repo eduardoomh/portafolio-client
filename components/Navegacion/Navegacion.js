@@ -12,7 +12,6 @@ export default function Navegacion() {
     const [navShow, setNavShow] = useState(true);
     const [tema, setTema] = useState("");
     const size = useWindowSize();
-    console.log(size.width)
     const router = useRouter();
 
     useEffect(() => {

@@ -54,12 +54,13 @@ const styles = css`
 
             ul{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4, 1fr);
                 padding-bottom: 1rem;
-                justify-content: flex-start;
-                width: 1000px;
-
+                justify-content: center;
+                width: 500px;
+                height: 10rem;
+                
                 li{
                     display: flex;
                     align-items: flex-start;

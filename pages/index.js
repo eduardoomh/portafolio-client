@@ -1,8 +1,5 @@
 import Head from 'next/head'
-import Link from "next/link"
 import usePerfil from "../hooks/usePerfil";
-import Banner from "../components/reutilizables/Banner";
-import Presentacion from "../components/Inicio/Presentacion";
 import ParrafoArray from "../components/reutilizables/ParrafoArray";
 import Portada from "../components/Inicio/Portada";
 

@@ -9,6 +9,7 @@ import { React } from "@ungap/global-this";
 ;
 export default function Conocimientos() {
     const [lista, setLista] = useState([]);
+    const [conocimientos, setConocimientos] = useState([]);
 
     const { data } = useQuery(OBTENER_LISTA_CONOCIMIENTOS, {
         variables: {
@@ -20,6 +21,7 @@ export default function Conocimientos() {
 
     useEffect(() => {
         if(data?.obtenerListaConocimientos){
+            setConocimientos(data?.obtenerListaConocimientos);
             let array = data.obtenerListaConocimientos;
 
             setLista([...array.conocimientos_principales, ...array.conocimientos_secundarios]);
@@ -36,7 +38,7 @@ export default function Conocimientos() {
             <Portada 
                 imagen="/conocimientos.svg" 
                 titulo="Mis Conocimientos" 
-                descripcion={data?.obtenerListaConocimientos.datos.conocimientos}
+                descripcion={conocimientos?.datos?.conocimientos}
             />
 
             <Lista 
@@ -45,7 +47,7 @@ export default function Conocimientos() {
             />
 
                 <Nota 
-                    texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                    texto={conocimientos?.datos?.nota_conocimientos} 
                 />
 
             </>

@@ -7,7 +7,6 @@ import MainBoton from "../../reutilizables/MainBoton";
 export default function Portada(props) {
     const { titulo, fecha, descripcion, imagen, url, estado } = props;
     const { width } = useWindowSize();
-    console.log(url, titulo, fecha, "la url");
 
     return (
         <>
