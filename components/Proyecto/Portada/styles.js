@@ -49,6 +49,14 @@ const styles = css`
             justify-content: center;
             align-items: center;
             margin-top: 2rem;
+
+            strong{
+                font-size: 1.5rem;
+                font-family: "Spectral";
+                background-color: #06FFB4;
+                color: black;
+                padding: .5rem;
+            }
         }
     }
 

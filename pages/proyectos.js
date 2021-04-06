@@ -1,27 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useQuery } from "@apollo/client";
-import usePerfil from "../hooks/usePerfil";
 import { OBTENER_LISTA_PROYECTOS } from "../graphql/querys/proyecto";
-import Banner from "../components/reutilizables/Banner";
-import Titulo from "../components/reutilizables/Titulo";
 import ListaProyectos from "../components/proyectos/ListaProyectos";
 import Portada from "../components/reutilizables/Portada";
 import Nota from "../components/reutilizables/Nota";
 
 export default function Proyectos() {
+    const [proyectos, setProyectos] = useState([]);
     const { data, loading } = useQuery(OBTENER_LISTA_PROYECTOS, {
         variables: {
             tipo1: "DISPONIBLE",
             tipo2: "EN_DESARROLLO"
         }
     });
-    const { usuario } = usePerfil();
 
     useEffect(() => {
 
-
+        if(data?.obtenerListaProyectos){
+            setProyectos(data?.obtenerListaProyectos);
+        }
     }, [data]);
 
     return (
@@ -34,7 +32,7 @@ export default function Proyectos() {
                 <Portada 
                     imagen="/proyectos.svg" 
                     titulo="Mis Proyectos" 
-                    descripcion={data?.obtenerListaProyectos?.datos?.proyectos}
+                    descripcion={proyectos?.datos?.proyectos}
                 />
 
                 {
@@ -43,12 +41,12 @@ export default function Proyectos() {
                         : (
                             <>
                                 <ListaProyectos
-                                    data={data?.obtenerListaProyectos?.proyectos_terminados}
+                                    data={proyectos?.proyectos_terminados}
                                     texto="Terminados"
                                     id="terminados"
                                 />
                                 <ListaProyectos
-                                    data={data?.obtenerListaProyectos?.proyectos_pendientes}
+                                    data={proyectos?.proyectos_pendientes}
                                     texto="En Desarrollo"
                                     id="pendientes"
                                 />
@@ -57,7 +55,7 @@ export default function Proyectos() {
                         )
                 }
                 <Nota 
-                    texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                    texto={proyectos?.datos?.nota_proyectos} 
                 />
 
 

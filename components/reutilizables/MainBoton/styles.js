@@ -18,7 +18,8 @@ const styles = css`
         
         &:hover{
             background-color: #413E3E;
-            color: #ffd464;
+            color: white;
+            cursor: pointer;
         }
     }
 `;

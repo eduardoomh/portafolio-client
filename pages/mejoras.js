@@ -1,3 +1,4 @@
+import {useState, useEffect} from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import { OBTENER_MEJORA } from "../graphql/querys/mejora";
@@ -7,7 +8,14 @@ import Nota from "../components/reutilizables/Nota";
 
 
 export default function Mejoras() {
+    const [mejoras, setMejoras] = useState([]);
     const { data } = useQuery(OBTENER_MEJORA);
+
+    useEffect(() => {
+        if(data?.obtenerMejora){
+            setMejoras(data?.obtenerMejora)
+        }
+    }, [data])
 
     return (
         <>
@@ -19,14 +27,14 @@ export default function Mejoras() {
                 <Portada 
                     imagen="/mejoras.svg" 
                     titulo="Futuras Mejoras" 
-                    descripcion={data?.obtenerMejora?.descripcion}
+                    descripcion={mejoras?.descripcion}
                 />
                 <Lista 
-                    pendientes={data?.obtenerMejora?.mejoras_pendientes} 
-                    terminadas={data?.obtenerMejora?.mejoras_terminadas}
+                    pendientes={mejoras?.mejoras_pendientes} 
+                    terminadas={mejoras?.mejoras_terminadas}
                 />
                 <Nota 
-                    texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                    texto={mejoras?.notas} 
                     />
             </>
         </>

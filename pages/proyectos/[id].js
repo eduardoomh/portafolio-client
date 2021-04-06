@@ -1,3 +1,4 @@
+import {useState, useEffect} from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
@@ -9,6 +10,8 @@ import Repositorios from "../../components/Proyecto/Repositorios";
 import Nota from "../../components/reutilizables/Nota";
 
 export default function Proyecto() {
+    const [proyecto, setProyecto] = useState([]);
+
     const { query } = useRouter();
     const { data } = useQuery(OBTENER_PROYECTO, {
         variables: {
@@ -16,32 +19,38 @@ export default function Proyecto() {
         }
     });
 
-    console.log(data);
+    useEffect(() => {
+        if(data?.obtenerProyecto){
+            setProyecto(data?.obtenerProyecto);
+        }
+    },[data]);
+
 
     return (
         <>
             <Head>
-                <title>Jesus EMH - Proyecto</title>
+                <title>{proyecto.nombre || "cargando"} Proyecto </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <>
             <Portada 
-                titulo={data?.obtenerProyecto.nombre || "cargando"}
-                descripcion={data?.obtenerProyecto.descripcion || "cargando"}
-                fecha={data?.obtenerProyecto.fecha || "cargando"}
-                imagen={data?.obtenerProyecto.imagen || "cargando"}
-                ur={data?.obtenerProyecto.url || "cargando"}
+                titulo={proyecto.nombre || "cargando"}
+                descripcion={proyecto.descripcion || "cargando"}
+                fecha={proyecto.fecha || "cargando"}
+                imagen={proyecto.imagen || "cargando"}
+                url={proyecto.url || "cargando"}
+                estado={proyecto.estado || "cargando"}
             />
             <Tecnologias 
-                principales={data?.obtenerProyecto.tecnologias_principales } 
-                secundarias={data?.obtenerProyecto.tecnologias_secundarias } 
+                principales={proyecto.tecnologias_principales } 
+                secundarias={proyecto.tecnologias_secundarias } 
             />
             
-            <Repositorios data={data?.obtenerProyecto.repositorios } />
-            <Detalles data={data?.obtenerProyecto.detalles} />
+            <Repositorios data={proyecto.repositorios } />
+            <Detalles data={proyecto.detalles} />
 
             <Nota 
-                texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
+                texto="Trato de hacer un proyecto por mes, y al terminarlo seguir agregandole mejoras periodicamente y mejorar el codigo." 
                 />
 
 

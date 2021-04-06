@@ -2,7 +2,7 @@ import css from "styled-jsx/css";
 
 const styles = css`
     div{
-        margin-bottom: 4rem;
+        margin-bottom: 8rem;
 
         h2{
             padding: 0 1rem;
@@ -10,13 +10,19 @@ const styles = css`
         }
 
         ul{
-            margin: 0 1rem;
+            margin: 0 ;
+            list-style: none;
+            
             
 
             li{
-                padding: .5rem;
+                padding: 1rem;
                 margin: 0 1rem;
-                font-size: "Spectral";
+                margin-bottom: 2rem;
+                font-family: "Spectral";
+                font-size: 1.1rem;
+                border-left: 10px solid #06FFB4;
+
             }
         }
     }
@@ -30,7 +36,12 @@ const styles = css`
 
             ul{
                 li{
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
+                    transition: .3s;
+
+                    &:hover{
+                        transform: translateX(10px);
+                    }
                 }
             }
         }

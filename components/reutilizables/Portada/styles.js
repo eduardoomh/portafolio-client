@@ -67,6 +67,7 @@ const styles = css`
                 grid-column: 2/3;                
                 width: 500px;
                 font-size: 20px;
+                font-size: 1.3rem;
             }
         }
     }
