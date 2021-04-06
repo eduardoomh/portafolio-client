@@ -1,5 +1,4 @@
 import css from "styled-jsx/css";
-import mainTheme from "../../../styles/mainTheme";
 
     const styles = css`    
             .banner{

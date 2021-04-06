@@ -22,7 +22,7 @@ const styles  = css`
             align-items: center;
             font-size: 1.4rem;
             font-weight: bold;
-            color: #274873;
+            color: var(--tertiary);
             margin: 0;
         }
 
@@ -39,7 +39,7 @@ const styles  = css`
         }
 
         .user-data{
-            border: 1px solid black;
+            border: 1px solid var(--text);
             padding: 1rem;
             height: 36rem;
             border-radius: 15px;
@@ -47,7 +47,7 @@ const styles  = css`
             article{
                 display: flex;
                 flex-direction: column;
-                background-color: #06FFB4;
+                background-color: var(--secondary);
                 width: calc(100% - 2rem);
                 min-height: 34rem;
                 margin: 0;

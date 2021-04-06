@@ -6,7 +6,7 @@ const styles = css`
 
         h2{
             padding: 0 1rem;
-            color: var(--black);
+            color: var(--text);
         }
 
         ul{
@@ -21,7 +21,7 @@ const styles = css`
                 margin-bottom: 2rem;
                 font-family: "Spectral";
                 font-size: 1.1rem;
-                border-left: 10px solid #06FFB4;
+                border-left: 10px solid var(--secondary);
 
             }
         }

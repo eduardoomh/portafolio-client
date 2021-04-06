@@ -6,7 +6,7 @@ const styles = css`
 
         h2{
             padding: 0 1rem;
-            color: var(--black);
+            color: var(--text);
         }
 
         ul{

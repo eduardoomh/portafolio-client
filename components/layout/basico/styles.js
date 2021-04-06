@@ -60,16 +60,30 @@ export const lightVariables = css.global`
 :root{
    --primary: #3C3838;
    --secondary: linear-gradient(to left, #d0ffae, #94f1d5a1);
-   --black: #171717;
-   --card-proyecto: #A9EDFC;
+   --primary: #3C3838; 
+   --secondary: #06FFB4;
+   --tertiary: #274873; 
+   --fourth: #A9EDFC;
+   --fifth: #5493DC;
+   --text: #171717;
+   --text-alternative: white;
+   --border: #DFDFDF;
+   --background: #FAFBFD;
+  
 }
 `;
 
 export const darkVariables = css.global`
 :root{
-   --primary: #3C3838;
-   --secondary: #94f1d5a1;
-   --black: #171717;
-   --card-proyecto: #A9EDFC;
+    --primary: #3C3838;
+   --secondary: linear-gradient(to left, #d0ffae, #94f1d5a1);
+   --primary: #3C3838; 
+   --secondary: #06FFB4;
+   --tertiary: #274873; 
+   --fourth: #A9EDFC;
+   --text: #171717;
+   --text-alternative: white;
+   --border: #DFDFDF;
+   --background: #FAFBFD;
 }
 `;

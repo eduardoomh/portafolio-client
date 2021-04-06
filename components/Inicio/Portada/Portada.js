@@ -6,12 +6,13 @@ import { RiFacebookBoxFill, RiPsychotherapyLine, RiAwardFill } from "react-icons
 import { GrLinkedin } from "react-icons/gr";
 import { GoSmiley } from "react-icons/go";
 import { FiPhoneCall } from "react-icons/fi";
+import Tooltip from "../../reutilizables/Tooltip";
 
-export default function Portada(props){
-    const {imagen, nombres, apellidos} = props;
-    const {width} = useWindowSize();
+export default function Portada(props) {
+    const { imagen, nombres, apellidos } = props;
+    const { width } = useWindowSize();
 
-    return(
+    return (
         <>
             <div>
                 <h1>{nombres} {apellidos}</h1>
@@ -19,12 +20,20 @@ export default function Portada(props){
                 <div className="user-data">
                     <article>
                         <div className="img-container">
-                            <img  
-                                src={imagen} 
-                                width={width <= 600 ? 130 : 150} 
-                                height={width <= 600 ? 130 : 150} 
-                                alt="jesus mh"
-                            />
+                            <Tooltip 
+                                nombre="Hay que promover el uso del cubrebocas" 
+                                position="left center"
+                                width="14rem"
+                                height="5rem"
+                            >
+                                <img
+                                    src={imagen}
+                                    width={width <= 600 ? 130 : 150}
+                                    height={width <= 600 ? 130 : 150}
+                                    alt="jesus mh"
+                                />
+                            </Tooltip>
+
                         </div>
                         <p>
                             <span>
@@ -33,42 +42,42 @@ export default function Portada(props){
                             Ingeniero en Sistemas
                         </p>
                         <p> <span>
-                                <RiAwardFill size={24} />
-                            </span>
+                            <RiAwardFill size={24} />
+                        </span>
                             Desarrollador web
                         </p>
                         <p><span>
-                                <RiPsychotherapyLine size={24} />
-                            </span>
+                            <RiPsychotherapyLine size={24} />
+                        </span>
                             23
                         </p>
                         <p>
                             <span>
-                                <GoSmiley size={24}/>
+                                <GoSmiley size={24} />
                             </span>
                             Mexico
                         </p>
                         <p id="social-media">
                             <span>
-                                <RiFacebookBoxFill size={28}/>
+                                <RiFacebookBoxFill size={28} />
                             </span>
                             <span>
-                                <GrLinkedin size={24}/>
-                            </span> 
+                                <GrLinkedin size={24} />
+                            </span>
                             <span>
-                                <AiOutlineGithub size={28}/>
-                            </span> 
+                                <AiOutlineGithub size={28} />
+                            </span>
                             <span>
-                                <FiPhoneCall size={28}/>
-                            </span> 
-                            
-                            
+                                <FiPhoneCall size={28} />
+                            </span>
+
+
                         </p>
                         <div className="user-button">
                             <MainBoton>Visualizar CV</MainBoton>
                         </div>
 
-                        
+
                     </article>
                 </div>
                 <p className="user-parrafo">En la programacion encontre la manera de convertir mis ideas  en realidades,  es un gusto mpara mi realizar soluciones a base de codigo y cumplir mis metas mas profundas.</p>
@@ -77,4 +86,4 @@ export default function Portada(props){
             <style jsx>{styles}</style>
         </>
     )
-} 
+}

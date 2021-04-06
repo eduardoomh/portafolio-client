@@ -3,13 +3,13 @@ import css from "styled-jsx/css";
 const styles = css`
     div{
         padding: 1rem;
-        margin-top: 2rem;
+        margin-top: 4.5rem;
         margin-bottom: 8rem;
 
         h2{
             font-size: 2rem;
             font-family: "Noto sans";
-            color: var(--black);
+            color: var(--text);
 
         }
 

@@ -55,7 +55,7 @@ const styles = css`
             ul{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-template-columns: repeat()(5, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 padding-bottom: 1rem;
                 justify-content: flex-start;
                 width: 1000px;

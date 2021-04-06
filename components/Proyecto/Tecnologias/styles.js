@@ -32,6 +32,7 @@ const styles = css`
                     font-weight: bold;
                     font-family: "Noto sans";
                     width: 100%;
+                    color: var(--text);
                 }
             }
         }

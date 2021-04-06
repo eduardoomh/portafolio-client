@@ -5,7 +5,7 @@ const styles = css`
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 5rem 4rem;
-        border: 1px solid #DFDFDF;
+        border: 1px solid var(--border);
     
  
         ul{
@@ -14,7 +14,7 @@ const styles = css`
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #FAFBFD;
+            background-color: var(--background);
             min-height: 100%;
             margin: 0;
             padding: 0;
@@ -28,7 +28,7 @@ const styles = css`
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--card-proyecto);
+            background-color: var(--fourth);
 
             img{
                 border-radius: 50%;
@@ -59,6 +59,8 @@ const styles = css`
 
             }
         }
+
     }
+    
 `;
 export default styles;

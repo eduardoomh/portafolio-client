@@ -10,15 +10,16 @@ const styles = css`
         height: 46px;
         padding: 1rem;
         background-color: transparent;
-        border: 1px solid #413E3E;
+        color: var(--text);
+        border: 1px solid var(--primary);
         border-radius: 3px;
         font-size: 1rem;
         transition: background-color .1s;
         
         
         &:hover{
-            background-color: #413E3E;
-            color: white;
+            background-color: var(--primary);
+            color: var(--text-alternative);
             cursor: pointer;
         }
     }

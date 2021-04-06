@@ -9,28 +9,26 @@ export default function ItemLista(props){
             
     return(
         <>
-            <div className="container">
+            <div className="container" className={completado ? "container" : "container pendiente"}>
                 <div className="icono">
                     {
                         completado ?  
-                            <CgCheckO size={width <= 600 ? 32 : 48} color="#FFD464" /> 
+                            <CgCheckO size={width <= 600 ? 32 : 48} color="#06FFB4" /> 
                                     : 
-                            <CgCloseO size={width <= 600 ? 32 : 48} color="#274873"/>
+                            <CgCloseO size={width <= 600 ? 32 : 48} color="#5493DC"/>
                     }
 
                 </div>
-                <h3>{titulo}</h3>
-                <p>{descripcion}</p>
+                <h3>{titulo}</h3> 
                 {
                     fecha !== false ? (
-                        <div className="fecha">
-                            <span>{fecha}</span>
-                        </div>
-                        
-                    ) : ""
+                        <span className="fecha">Realizado: {fecha}</span>
+                    ) : (
+                        ""
+                    )
                 }
-
-               
+                
+                <p>{descripcion}</p>
 
             </div>
             <style jsx>{styles}</style>

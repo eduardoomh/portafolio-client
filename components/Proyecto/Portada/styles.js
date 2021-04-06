@@ -26,14 +26,14 @@ const styles = css`
             text-align: center;
             padding: 0 1rem;
             font-size: 32px;
-            color: var(--black);
+            color: var(--text);
         }
 
         span{
             text-align: center;
             display: block;
             padding : 0 1rem;
-            color: #274873;
+            color: var(--fifth);
             font-weight: bold;
         }
 
@@ -53,8 +53,8 @@ const styles = css`
             strong{
                 font-size: 1.5rem;
                 font-family: "Spectral";
-                background-color: #06FFB4;
-                color: black;
+                background-color: var(--secondary);
+                color: var(--text);
                 padding: .5rem;
             }
         }

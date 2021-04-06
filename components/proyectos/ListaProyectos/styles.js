@@ -6,7 +6,7 @@ const styles = css`
         font-size: "Spectral";
 
         h2{
-            color: #3C3838;
+            color: var(--text);
             font-family: 'Noto Sans', sans-serif;
             padding: 0;
             margin: 0;
