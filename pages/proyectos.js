@@ -55,7 +55,7 @@ export default function Proyectos() {
                         )
                 }
                 <Nota 
-                    texto={proyectos?.datos?.nota_proyectos} 
+                    texto={proyectos?.datos?.nota_proyectos}
                 />
 
 

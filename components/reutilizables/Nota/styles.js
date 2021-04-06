@@ -6,9 +6,11 @@ const styles = css`
         grid-template-columns: 1fr 1fr;
         grid-template-rows:.3fr 1fr;
         margin-bottom: 2rem;
+        margin-top: 4rem;
         gap: 0;
         border-left: 10px solid var(--secondary); 
         margin-left: 1rem;
+        
 
         .avatar{
             grid-column: 1/2;
