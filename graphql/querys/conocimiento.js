@@ -32,6 +32,7 @@ export const OBTENER_CONOCIMIENTOS_SECUNDARIOS = gql`
 
 export const CONOCIMIENTOS_DATOS_FRAGMENT = gql`
     fragment conocimientoDatos on Conocimiento {
+        id
         nombre
         descripcion
         tecnologias{

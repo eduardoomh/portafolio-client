@@ -12,11 +12,11 @@ export default function Footer(){
                 <ul>
                     <li>Github</li>
                     <li>Linkedln</li>
-                    <li>Whatsapp +52 8683698752</li>
-                    <li>Correo Electronico eduardoomh@outlook.com</li>
+                    <li>Whatsapp  <span>+52 8683698752</span></li>
+                    <li>Correo Electronico <span>eduardoomh@outlook.com</span></li>
                     <li>Facebook</li>
-                    <li>Regalame una taza de cafe</li>
                     <li>Curriculum Vitae</li>
+     
                 </ul>
                 <p>Jesus MH - 2021</p>
             </footer>

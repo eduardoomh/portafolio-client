@@ -1,16 +1,30 @@
+import {useState, useEffect} from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import { OBTENER_LISTA_CONOCIMIENTOS } from "../graphql/querys/conocimiento";
 import Portada from '../components/reutilizables/Portada';
+import Lista from "../components/conocimientos/Lista";
 import Nota from "../components/reutilizables/Nota";
+import { React } from "@ungap/global-this";
 ;
 export default function Conocimientos() {
-    const { data, loading } = useQuery(OBTENER_LISTA_CONOCIMIENTOS, {
+    const [lista, setLista] = useState([]);
+
+    const { data } = useQuery(OBTENER_LISTA_CONOCIMIENTOS, {
         variables: {
             tipo1: "PRINCIPAL",
             tipo2: "SECUNDARIO"
         }
     });
+
+
+    useEffect(() => {
+        if(data?.obtenerListaConocimientos){
+            let array = data.obtenerListaConocimientos;
+
+            setLista([...array.conocimientos_principales, ...array.conocimientos_secundarios]);
+        }
+    }, [data]);
 
     return (
         <>
@@ -25,16 +39,11 @@ export default function Conocimientos() {
                 descripcion={data?.obtenerListaConocimientos.datos.conocimientos}
             />
 
-                {
-                    loading
-                        ? <p>cargando</p>
-                        : (
-                            <>
+            <Lista 
+                titulo="Conocimientos" 
+                lista={lista}
+            />
 
-
-                            </>
-                        )
-                }
                 <Nota 
                     texto="Solo yo le doy mantenimiento a esta aplicacion, por lo tanto el proceso de mejoras puede ser tardado." 
                 />

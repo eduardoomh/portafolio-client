@@ -1,5 +1,4 @@
 import css from "styled-jsx/css";
-import mainTheme from "../../../styles/mainTheme";
 
 const styles = css`
     footer{
@@ -39,6 +38,40 @@ const styles = css`
                 
         }    
                 
+    }
+
+    @media (min-width: 600px){
+        footer{
+            height: 30rem;
+
+            p{
+                font-size: 1.3rem;
+            }
+
+            h4{
+                font-size: 1.8rem;
+            }
+
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: repeat()(5, 1fr);
+                padding-bottom: 1rem;
+                justify-content: flex-start;
+                width: 1000px;
+
+                li{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    font-size: 1.2rem;
+
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 
 

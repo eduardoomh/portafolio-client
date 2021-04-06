@@ -12,8 +12,8 @@ export default function Portada(props){
                 <div className="imagen">
                 <Image 
                     src={imagen} 
-                    width={width >= 600 ? 400 : 310} 
-                    height={width >= 600 ? 400 : 310} 
+                    width={width >= 600 ? 480 : 310} 
+                    height={width >= 600 ? 480 : 310} 
                     alt="imagen" 
                 />
                 </div>

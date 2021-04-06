@@ -21,6 +21,11 @@ const styles = css`
             
         }
     }
+    @media (min-width: 600px){
+        div{
+            padding: 0;
+        }
+    }
 
 `;
 
