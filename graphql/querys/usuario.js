@@ -12,23 +12,27 @@ export const OBTENER_USUARIO = gql`
             apodo
             facebook
             github
+            linkedin
             edad
             imagen
-            descripcion{
-                texto
-            }
+            descripcion
             experiencia{
                 texto
             }
             estudios{
-                texto
+                titulo
+                descripcion
+                tipo
+                fecha
+                tecnologia{
+                    nombre
+                    imagen
+                }
             }
             personalidad{
                 texto
             }
-            pasatiempos{
-                texto
-            }
+            pasatiempos
             telefono
             updatedAt
             createdAt

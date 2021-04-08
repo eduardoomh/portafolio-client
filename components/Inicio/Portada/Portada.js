@@ -1,4 +1,5 @@
 import styles from "./styles";
+import Link from "next/link";
 import MainBoton from "../../reutilizables/MainBoton";
 import useWindowSize from "../../../hooks/useWindowSize";
 import { AiTwotoneTrophy, AiOutlineGithub } from "react-icons/ai";
@@ -7,9 +8,10 @@ import { GrLinkedin } from "react-icons/gr";
 import { GoSmiley } from "react-icons/go";
 import { FiPhoneCall } from "react-icons/fi";
 import Tooltip from "../../reutilizables/Tooltip";
+import RedesSociales from "../../reutilizables/RedesSociales";
 
 export default function Portada(props) {
-    const { imagen, nombres, apellidos } = props;
+    const { imagen, nombres, apellidos, descripcion, facebook, github, linkedin, telefono } = props;
     const { width } = useWindowSize();
 
     return (
@@ -57,30 +59,25 @@ export default function Portada(props) {
                             </span>
                             Mexico
                         </p>
-                        <p id="social-media">
-                            <span>
-                                <RiFacebookBoxFill size={28} />
-                            </span>
-                            <span>
-                                <GrLinkedin size={24} />
-                            </span>
-                            <span>
-                                <AiOutlineGithub size={28} />
-                            </span>
-                            <span>
-                                <FiPhoneCall size={28} />
-                            </span>
-
-
-                        </p>
+                        <RedesSociales 
+                            facebook={facebook} 
+                            linkedin={linkedin} 
+                            github={github} 
+                            telefono={telefono} 
+                        />
                         <div className="user-button">
-                            <MainBoton>Visualizar CV</MainBoton>
+                            <MainBoton>
+                                <Link href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">
+                                    <a>Visualizar CV
+                                    </a>
+                                </Link>
+                            </MainBoton>
                         </div>
 
 
                     </article>
                 </div>
-                <p className="user-parrafo">En la programacion encontre la manera de convertir mis ideas  en realidades,  es un gusto mpara mi realizar soluciones a base de codigo y cumplir mis metas mas profundas.</p>
+                <p className="user-parrafo">{descripcion}</p>
                 <p className="user-frase">“Transformar mis ideas a codigo es la mayor satisfaccion que puede haber”</p>
             </div>
             <style jsx>{styles}</style>

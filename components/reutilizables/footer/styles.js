@@ -53,9 +53,6 @@ const styles = css`
             }
 
             ul{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: repeat(4, 1fr);
                 padding-bottom: 1rem;
                 justify-content: center;
                 width: 500px;
