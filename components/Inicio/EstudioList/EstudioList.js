@@ -1,4 +1,4 @@
-import EstudioCard from "components/inicio/EstudioCard";
+import EstudioCard from "components/Inicio/EstudioCard";
 import styles from "./styles";
 
 export default function EstudioList(props){
