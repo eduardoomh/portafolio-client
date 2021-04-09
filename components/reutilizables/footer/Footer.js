@@ -24,9 +24,7 @@ export default function Footer(){
                 <ul>
                     <li>{usuario?.correo_electronico}</li>    
                     <li>  
-                        <Link href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">
-                            <a>Curriculum</a>
-                        </Link> 
+                        <a  target="_blank" href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">Curriculum</a>
                     </li>
      
                 </ul>
