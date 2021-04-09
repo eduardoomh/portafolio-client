@@ -1,5 +1,5 @@
 import Image from "next/image";
-import usePerfil from "../../../hooks/usePerfil";
+import usePerfil from "hooks/usePerfil";
 import styles from "./styles";
 
 export default function Nota(props){

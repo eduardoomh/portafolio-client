@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
-import { OBTENER_LISTA_PROYECTOS } from "../graphql/querys/proyecto";
-import ListaProyectos from "../components/proyectos/ListaProyectos";
-import Portada from "../components/reutilizables/Portada";
-import Nota from "../components/reutilizables/Nota";
+import { OBTENER_LISTA_PROYECTOS } from "graphql/querys/proyecto";
+import ListaProyectos from "components/proyectos/ListaProyectos";
+import Portada from "components/reutilizables/Portada";
+import Nota from "components/reutilizables/Nota";
 
 export default function Proyectos() {
     const [proyectos, setProyectos] = useState([]);

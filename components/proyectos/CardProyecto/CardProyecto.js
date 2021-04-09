@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import useWindowSize from "../../../hooks/useWindowSize";
-import MainBoton from "../../reutilizables/MainBoton";
+import useWindowSize from "hooks/useWindowSize";
+import MainBoton from "components/reutilizables/MainBoton";
 import styles from "./styles";
-import Tooltip from "../../reutilizables/Tooltip";
+import Tooltip from "components/reutilizables/Tooltip";
 
 export default function CardProyecto(props) {
     const { nombre, imagen, tecnologias_principales, id } = props.data;

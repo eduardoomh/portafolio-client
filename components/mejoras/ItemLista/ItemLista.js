@@ -1,6 +1,6 @@
 import { CgCheckO } from "react-icons/cg";
 import { CgCloseO } from "react-icons/cg";
-import useWindowSize from "../../../hooks/useWindowSize";
+import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 
 export default function ItemLista(props){

@@ -1,11 +1,10 @@
 import {useState, useEffect} from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
-import { OBTENER_LISTA_CONOCIMIENTOS } from "../graphql/querys/conocimiento";
-import Portada from '../components/reutilizables/Portada';
-import Lista from "../components/conocimientos/Lista";
-import Nota from "../components/reutilizables/Nota";
-import { React } from "@ungap/global-this";
+import { OBTENER_LISTA_CONOCIMIENTOS } from "graphql/querys/conocimiento";
+import Portada from 'components/reutilizables/Portada';
+import Lista from "components/conocimientos/Lista";
+import Nota from "components/reutilizables/Nota";
 ;
 export default function Conocimientos() {
     const [lista, setLista] = useState([]);

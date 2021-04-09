@@ -2,12 +2,12 @@ import {useState, useEffect} from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
-import { OBTENER_PROYECTO } from "../../graphql/querys/proyecto";
-import Portada from "../../components/Proyecto/Portada";
-import Tecnologias from "../../components/Proyecto/Tecnologias";
-import Detalles from "../../components/Proyecto/Detalles";
-import Repositorios from "../../components/Proyecto/Repositorios";
-import Nota from "../../components/reutilizables/Nota";
+import { OBTENER_PROYECTO } from "graphql/querys/proyecto";
+import Portada from "components/Proyecto/Portada";
+import Tecnologias from "components/Proyecto/Tecnologias";
+import Detalles from "components/Proyecto/Detalles";
+import Repositorios from "components/Proyecto/Repositorios";
+import Nota from "components/reutilizables/Nota";
 
 export default function Proyecto() {
     const [proyecto, setProyecto] = useState([]);

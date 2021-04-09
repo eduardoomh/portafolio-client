@@ -1,10 +1,10 @@
 import {useState, useEffect, useMemo} from "react";
 import {ApolloProvider} from "@apollo/client";
-import {client} from "../graphql/apollo";
-import {OBTENER_USUARIO} from "../graphql/querys/usuario";
-import usuarioContext from "../context/usuarioContext";
-import LayoutBasico from "../components/layout/basico";
-import '../styles/globals.css'
+import {client} from "graphql/apollo";
+import {OBTENER_USUARIO} from "graphql/querys/usuario";
+import usuarioContext from "context/usuarioContext";
+import LayoutBasico from "components/layout/basico";
+import 'styles/globals.css'
 import 'reactjs-popup/dist/index.css';
 
 

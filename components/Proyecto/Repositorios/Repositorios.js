@@ -1,5 +1,5 @@
 import Link from "next/link";
-import useWindowSize from "../../../hooks/useWindowSize";
+import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 
 export default function Repositorios(props){

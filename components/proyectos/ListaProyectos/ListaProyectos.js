@@ -1,7 +1,7 @@
-import useWindowSize from "../../../hooks/useWindowSize";
-import CardProyecto from "../CardProyecto";
-import Parrafo from "../../reutilizables/Parrafo";
-import MainBoton from "../../reutilizables/MainBoton";
+import useWindowSize from "hooks/useWindowSize";
+import CardProyecto from "components/proyectos/CardProyecto";
+import Parrafo from "components/reutilizables/Parrafo";
+import MainBoton from "components/reutilizables/MainBoton";
 import styles from "./styles";
 
 export default function ProyectosList(props){

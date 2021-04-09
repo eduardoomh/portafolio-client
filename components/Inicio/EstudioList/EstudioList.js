@@ -1,4 +1,4 @@
-import EstudioCard from "../EstudioCard";
+import EstudioCard from "components/inicio/EstudioCard";
 import styles from "./styles";
 
 export default function EstudioList(props){
@@ -9,7 +9,9 @@ export default function EstudioList(props){
             <div>
                 <h2>Estudios {titulo}</h2>
                 {
-                    data && data.length > 0 ? data?.map(element => <EstudioCard data={element} />) : "no hay datos"
+                    data && data.length > 0 ? 
+                        data?.map(element => 
+                            <EstudioCard data={element} key={element.titulo} />) : "no hay datos"
                 }
                 
             </div>

@@ -1,0 +1,32 @@
+[33madd8deb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m pagina de inicio, estudios y footer redisenados
+[33mb6a1da4[m[33m ([m[1;31morigin/main[m[33m)[m correccion de errores
+[33m77df5c6[m modificaciones en footer y eliminacion de consoles.log
+[33md0c1ddd[m asignacion de variables, mejoras de codigo y rediseño de algunas partes
+[33md0e2f31[m mejoras internas, rediseño de paginas y detalles[
+[33m604d08c[m pagina de conocimientos terminada
+[33m617686f[m cambio de imagen en conocimientos y mejora movil de imagen de proyecto
+[33m955e2b4[m correccion de errores
+[33m4558ddb[m portada de pagina de inicio
+[33ma89407d[m rediseno total de la aplicacion
+[33m8c8e864[m pagina de proyectos redisenada
+[33mf999871[m svg paran indicar al usuario que la pagina sigue cargando
+[33m225bd71[m pagina de loading
+[33m0b9e11c[m layout en pagina root
+[33ma69af0d[m pagina de inicio mejora de datos personales
+[33m66548cd[m maquetacion del diseno de figma parte 1
+[33m62673a1[m otro error
+[33m19d0555[m solucion de error que no deberia ser error
+[33mf5a5d8b[m error 2
+[33m902b11a[m error solucionado
+[33m250dc8f[m mejoras en los estilos y en la estructura de componentes
+[33mf13467e[m correccion de errores
+[33m02fb070[m creacion de layout responsive utilizando mobile first
+[33m41c8d4c[m banner responsive
+[33m9565aaa[m gitignore incluido
+[33m5741979[m responsive web design 1
+[33m026d746[m detalles de la interfaz grafica
+[33m67d9510[m cambios en la interfaz
+[33mee9cb01[m cambios en las cabeceras
+[33m4e56983[m cambios en la pagina de inicio
+[33m1a0a57a[m primer commit
+[33m2e747c0[m Initial commit from Create Next App

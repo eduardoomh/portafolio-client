@@ -1,10 +1,11 @@
 import Link from "next/link";
-import usePerfil from "../../../hooks/usePerfil";
-import RedesSociales from "../RedesSociales";
+import usePerfil from "hooks/usePerfil";
+import RedesSociales from "components/reutilizables/RedesSociales"
 import styles from "./styles";
 
 export default function Footer(){
-    const {facebook, github, linkedin, telefono, correo_electronico} = usePerfil();
+    const {usuario} = usePerfil();
+
 
     return(
         <>
@@ -13,17 +14,15 @@ export default function Footer(){
                     Dejo mis redes de contacto para que cualquier persona pueda comunicarse conmigo.
                 </p>
                 <h4>Contacto</h4>
-                {
 
-                }
                 <RedesSociales 
-                    facebook={facebook || ""} 
-                    github={github || ""} 
-                    linkedin={linkedin || ""} 
-                    telefono={telefono || ""} 
+                    facebook={usuario?.facebook || ""} 
+                    github={usuario?.github || ""} 
+                    linkedin={usuario?.linkedin || ""} 
+                    telefono={usuario?.telefono || ""} 
                 />
                 <ul>
-                    <li>eduardoomh@outlook.com</li>    
+                    <li>{usuario?.correo_electronico}</li>    
                     <li>  
                         <Link href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">
                             <a>Curriculum</a>

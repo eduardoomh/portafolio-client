@@ -1,18 +1,18 @@
 import styles from "./styles";
 import Link from "next/link";
-import MainBoton from "../../reutilizables/MainBoton";
-import useWindowSize from "../../../hooks/useWindowSize";
-import { AiTwotoneTrophy, AiOutlineGithub } from "react-icons/ai";
-import { RiFacebookBoxFill, RiPsychotherapyLine, RiAwardFill } from "react-icons/ri";
-import { GrLinkedin } from "react-icons/gr";
+import MainBoton from "components/reutilizables/MainBoton";
+import useWindowSize from "hooks/useWindowSize";
+import useUtils from "hooks/useUtils";
+import { AiTwotoneTrophy } from "react-icons/ai";
+import { RiPsychotherapyLine, RiAwardFill } from "react-icons/ri";
 import { GoSmiley } from "react-icons/go";
-import { FiPhoneCall } from "react-icons/fi";
-import Tooltip from "../../reutilizables/Tooltip";
-import RedesSociales from "../../reutilizables/RedesSociales";
+import Tooltip from "components/reutilizables/Tooltip";
+import RedesSociales from "components/reutilizables/RedesSociales";
 
 export default function Portada(props) {
     const { imagen, nombres, apellidos, descripcion, facebook, github, linkedin, telefono } = props;
     const { width } = useWindowSize();
+    const { curriculum, frase } = useUtils();
 
     return (
         <>
@@ -67,10 +67,9 @@ export default function Portada(props) {
                         />
                         <div className="user-button">
                             <MainBoton>
-                                <Link href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">
-                                    <a>Visualizar CV
+                                    <a href={curriculum} target="_blank">
+                                        Curriculum
                                     </a>
-                                </Link>
                             </MainBoton>
                         </div>
 
@@ -78,7 +77,7 @@ export default function Portada(props) {
                     </article>
                 </div>
                 <p className="user-parrafo">{descripcion}</p>
-                <p className="user-frase">“Transformar mis ideas a codigo es la mayor satisfaccion que puede haber”</p>
+                <p className="user-frase">{frase}</p>
             </div>
             <style jsx>{styles}</style>
         </>

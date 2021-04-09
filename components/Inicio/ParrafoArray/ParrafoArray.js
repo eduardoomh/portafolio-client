@@ -8,7 +8,7 @@ export default function ParrafoArray(props){
             <h2>{titulo}</h2>
             <ul>
                 {
-                    parrafos?.map(p => <li key={p?.texto?.substring(1,5)}>{p?.texto}</li>)
+                    parrafos?.map(p => <li key={p?.texto}>{p?.texto}</li>)
                 }
 
             </ul>

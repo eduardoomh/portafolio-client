@@ -1,5 +1,5 @@
 import Image from "next/image";
-import useWindowSIze from "../../../hooks/useWindowSize";
+import useWindowSIze from "hooks/useWindowSize";
 import styles from "./styles";
 
 export default function Portada(props){

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import usePerfil from "../hooks/usePerfil";
-import ParrafoArray from "../components/Inicio/ParrafoArray";
-import Portada from "../components/Inicio/Portada";
-import EstudioList from "../components/Inicio/EstudioList";
-import Nota from "../components/reutilizables/Nota";
+import usePerfil from "hooks/usePerfil";
+import ParrafoArray from "components/Inicio/ParrafoArray";
+import Portada from "components/Inicio/Portada";
+import EstudioList from "components/Inicio/EstudioList";
+import Nota from "components/reutilizables/Nota";
 
 export default function Home() {
   const { usuario } = usePerfil();
@@ -86,7 +86,8 @@ export default function Home() {
                     }
                   ]}
                 />
-                <Nota texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion." />
+                <Nota   
+                  texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion." />
               </>
             )
         }

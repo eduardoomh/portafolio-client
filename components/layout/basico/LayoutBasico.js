@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
 import Image from "next/image";
-import Navegacion from "../../Navegacion";
-import Footer from "../../reutilizables/footer";
-import useWindowSize from "../../../hooks/useWindowSize";
+import Navegacion from "components/Navegacion";
+import Footer from "components/reutilizables/footer";
+import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 import {lightVariables, darkVariables} from "./styles";
 

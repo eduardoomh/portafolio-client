@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import useWindowSize from "../../../hooks/useWindowSize";
+import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
-import MainBoton from "../../reutilizables/MainBoton";
+import MainBoton from "components/reutilizables/MainBoton";
 
 export default function Portada(props) {
     const { titulo, fecha, descripcion, imagen, url, estado } = props;

@@ -1,10 +1,10 @@
 import {useState, useEffect} from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
-import { OBTENER_MEJORA } from "../graphql/querys/mejora";
-import Portada from "../components/reutilizables/Portada";
-import Lista from "../components/mejoras/Lista";
-import Nota from "../components/reutilizables/Nota";
+import { OBTENER_MEJORA } from "graphql/querys/mejora";
+import Portada from "components/reutilizables/Portada";
+import Lista from "components/mejoras/Lista";
+import Nota from "components/reutilizables/Nota";
 
 
 export default function Mejoras() {

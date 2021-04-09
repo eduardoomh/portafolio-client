@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {AiOutlineGithub } from "react-icons/ai";
 import { RiFacebookBoxFill} from "react-icons/ri";
 import { GrLinkedin } from "react-icons/gr";
@@ -12,37 +11,25 @@ export default function RedesSociales(props) {
         <>
             <div>
                 <span>
-                    <Link href={facebook}>
-                        <a>
-                            <RiFacebookBoxFill size={28} />
-                        </a>
-                    </Link>
-
+                    <a href={facebook} target="_blank">
+                        <RiFacebookBoxFill size={28} />
+                    </a>
                 </span>
                 <span>
-                    <Link href={linkedin}>
-                        <a>
-                            <GrLinkedin size={24} />
-                        </a>
-                    </Link>
-
+                    <a href={linkedin} target="_blank">
+                        <GrLinkedin size={24} />
+                    </a>
                 </span>
                 <span>
-
-                    <Link href={github}>
-                        <a>
-                            <AiOutlineGithub size={28} />
-                        </a>
-                    </Link>
+                    <a href={github} target="_blank">
+                        <AiOutlineGithub size={28} />
+                    </a>
                 </span>
 
                 <span>
-
-                    <Link href={`https://wa.me/52${telefono}`}>
-                        <a>
-                            <FiPhoneCall size={28} />
-                        </a>
-                    </Link>
+                    <a href={`https://wa.me/52${telefono}`} target="_blank">
+                        <FiPhoneCall size={28} />
+                    </a>
                 </span>
             </div>
             <style jsx>{styles}</style>
