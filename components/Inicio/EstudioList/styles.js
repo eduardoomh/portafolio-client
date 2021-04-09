@@ -10,7 +10,7 @@ const styles  = css`
         }
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1010px){
         div{
             padding: 0;
 

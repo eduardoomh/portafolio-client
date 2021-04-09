@@ -31,7 +31,7 @@ export default function Conocimientos() {
         <>
             <Head>
                 <title>Conocimientos - JesusMH</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/mh.ico" />
             </Head>
             <>
             <Portada 

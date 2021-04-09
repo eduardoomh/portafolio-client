@@ -21,7 +21,7 @@ export default function Mejoras() {
         <>
             <Head>
                 <title>Mejoras - JesusMH</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/mh.ico" />
             </Head>
             <>
                 <Portada 

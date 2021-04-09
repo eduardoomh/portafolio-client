@@ -11,7 +11,7 @@ const styles = css`
         }
 
         ul{
-            margin-left: 2rem;
+            list-style: none;
 
             
             li{
@@ -19,6 +19,8 @@ const styles = css`
                 text-align: start;
                 font-size: 1.2rem;
                 margin-bottom: 1rem;
+                padding-left: 1rem;
+                border-left: 5px solid var(--secondary);
             }
 
         }
@@ -26,7 +28,7 @@ const styles = css`
 
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1010px){
         .contenedor{
             padding: 4rem 0;
 

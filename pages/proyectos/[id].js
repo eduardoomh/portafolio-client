@@ -30,7 +30,7 @@ export default function Proyecto() {
         <>
             <Head>
                 <title>{proyecto.nombre || "cargando"} Proyecto </title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/mh.ico" />
             </Head>
             <>
             <Portada 

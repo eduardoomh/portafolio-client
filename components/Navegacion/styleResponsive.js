@@ -1,9 +1,8 @@
 import css from 'styled-jsx/css'
-import mainTheme from "../../styles/mainTheme";
 
 export const styleResponsive = css`
 
-    @media (min-width: 600px) {
+    @media (min-width: 1000px) {
 
     .nav{
         max-width: 10px;

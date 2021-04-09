@@ -35,7 +35,7 @@ export default function LayoutBasico(props){
                         (
                             <div className="loading">
                                 {
-                                    width <= 600 ? (
+                                    width <= 800 ? (
                                         <>
                                             <Image src="/loading_movil.svg" width={382} height={372} alt="svg" />
                                             <Image src="/loading_text_movil.svg" width={382} height={372} alt="svg" />

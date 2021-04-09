@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Head>
         <title>Jesus EMH - Portafolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/mh.ico" />
       </Head>
 
       <>
@@ -62,30 +62,6 @@ export default function Home() {
                   parrafos={usuario?.personalidad}
                 />
 
-
-                <ParrafoArray
-                  titulo="Pasatiempos"
-                  parrafos={[
-                    {
-                      "texto": "Descubrir musica nueva"
-                    },
-                    {
-                      "texto": "Practicar Ajedrez"
-                    },
-                    {
-                      "texto": "Ver series y peliculas"
-                    },
-                    {
-                      "texto": "Caminar"
-                    },
-                    {
-                      "texto": "Escribir codigo"
-                    },
-                    {
-                      "texto": "Salir con amigos"
-                    }
-                  ]}
-                />
                 <Nota   
                   texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion." />
               </>

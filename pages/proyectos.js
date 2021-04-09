@@ -26,7 +26,7 @@ export default function Proyectos() {
         <>
             <Head>
                 <title>Proyectos - JesusMH</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/mh.ico" />
             </Head>
             <>
                 <Portada 

@@ -2,12 +2,13 @@ import css from "styled-jsx/css";
 
 const styles = css`
     div{
-        display: grid;
+        display: grid; 
 
 
         main{
             padding-top: 3rem;
             min-height: 100vh;
+           
 
             .loading{
                 flex-direction: column;
@@ -36,11 +37,10 @@ const styles = css`
     }
 
 
-    @media (min-width: 600px){
+    @media (min-width: 800px){
         div{
             main{
                 margin: auto;
-                width: 1000px;
 
                 .loading{
                     flex-direction: column;
@@ -49,6 +49,14 @@ const styles = css`
                     max-width: 1000px;
 
                 }
+            }
+        }
+    }
+
+    @media (min-width: 1000px){
+        div{
+            main{
+                width: 1000px;
             }
         }
     }
@@ -69,7 +77,9 @@ export const lightVariables = css.global`
    --text-alternative: white;
    --border: #DFDFDF;
    --background: #FAFBFD;
-  
+   --background-page: #62ffd0;
+   --gradient: linear-gradient(41deg, var(--background-page), #03ffce00);
+
 }
 `;
 

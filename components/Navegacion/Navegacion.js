@@ -15,7 +15,7 @@ export default function Navegacion() {
     const router = useRouter();
 
     useEffect(() => {
-        if (size.width >= 600) {
+        if (size.width >= 1000) {
             setNavShow(true)
         } else {
             setNavShow(false);
