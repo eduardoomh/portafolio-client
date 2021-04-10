@@ -51,16 +51,16 @@ const styles = css`
             margin-top: 2rem;
 
             strong{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 font-family: "Spectral";
                 background-color: var(--secondary);
                 color: var(--text);
-                padding: .5rem;
+                padding: .5rem 1rem;
             }
         }
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1000px){
         .container{
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 6rem 2.5rem 10rem 5rem;

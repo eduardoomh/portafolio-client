@@ -154,6 +154,11 @@ export default function PerfilCard(props) {
                     max-height: 32rem;
                     min-height:32rem;
                     justify-content: space-between;
+                    transition: transform .3s ease-in-out;
+
+                    &:hover{
+                        transform: translatex(10px);
+                    }
                     
                     p{
                         margin: 0 1rem;

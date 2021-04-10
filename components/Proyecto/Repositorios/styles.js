@@ -32,17 +32,16 @@ const styles = css`
         }
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 800px){
         div{
             margin-bottom: 6rem;
 
             h2{
                 font-size: 2rem;
-                padding: 0;
             }
 
             ul{
-                padding: 0;
+                
 
                 li{
                     font-size: 1.3rem;
@@ -52,6 +51,19 @@ const styles = css`
                 }
             }
         }
+    }
+
+    @media (min-width: 1010px){
+        div{
+            h2{
+                padding: 0;
+            }
+
+            ul{
+                padding: 0;
+            }
+        }
+
     }
 `;
 

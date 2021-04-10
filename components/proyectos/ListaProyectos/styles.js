@@ -11,43 +11,53 @@ const styles = css`
             padding: 0;
             margin: 0;
             font-size: 2rem;
+            margin-bottom: 2rem;
 
         }
 
         .proyectos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-size: 1.2rem;
             margin-top: 2.5rem;
-
-            .boton-div{
-                display: flex;
-                justify-content: center;
-            }
-            
+            gap: 3rem;            
         }
 
     }
 
-    @media (min-width:600px){
+    @media (min-width: 700px){
+        .contenedor{
+            .proyectos{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 3rem;
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            }
+
+            h2{
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    @media (min-width:900px){
         .contenedor{
             padding: 6rem 1rem;
 
             h2{
-                padding: 0;
+                padding-left: 1rem;
             }
 
             .proyectos{
-                display: grid;
-                grid-template-columns: 17rem 1fr;
-                grid-template-rows: 1fr;
-                gap: 1rem;
-
-                div{
-                    display: grid;
-                    grid-template-columns: 17rem 1fr;
-                    min-width: 100% !important;
-                    width: 1000px;
-                    padding-top: 2rem;
-                }
+                grid-template-columns: 1fr 1fr 1fr;
 
                 p{
                     grid-column: 1/ span 2;

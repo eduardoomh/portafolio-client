@@ -1,7 +1,9 @@
+import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 
 export default function EstudioCard({data}){
     const {titulo, descripcion, tecnologia, fecha} = data;
+    const {width} = useWindowSize();
 
     return(
         <>
@@ -10,8 +12,8 @@ export default function EstudioCard({data}){
                     <img 
                         src={tecnologia?.imagen} 
                         alt={tecnologia?.nombre}
-                        width={90}
-                        height={90}
+                        width={width>= 800 ? 90 : 50}
+                        height={width>= 800 ? 90 : 50}
                     />
                 </div>
                

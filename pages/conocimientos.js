@@ -2,13 +2,16 @@ import {useState, useEffect} from "react";
 import Head from "next/head";
 import { useQuery } from "@apollo/client";
 import { OBTENER_LISTA_CONOCIMIENTOS } from "graphql/querys/conocimiento";
+import useWindowSIze from "hooks/useWindowSize";
 import Portada from 'components/reutilizables/Portada';
 import Lista from "components/conocimientos/Lista";
 import Nota from "components/reutilizables/Nota";
+import ConocimientoVector from "components/conocimientos/ConocimientoVector";
 ;
 export default function Conocimientos() {
     const [lista, setLista] = useState([]);
     const [conocimientos, setConocimientos] = useState([]);
+    const {width} = useWindowSIze();
 
     const { data } = useQuery(OBTENER_LISTA_CONOCIMIENTOS, {
         variables: {
@@ -38,7 +41,10 @@ export default function Conocimientos() {
                 imagen="/conocimientos.svg" 
                 titulo="Mis Conocimientos" 
                 descripcion={conocimientos?.datos?.conocimientos}
-            />
+                Vector={<ConocimientoVector />}
+            >
+                <ConocimientoVector width={width >= 1000 ? 480 : 310} height={width >= 1000 ? 480 : 310} />
+            </Portada>
 
             <Lista 
                 titulo="Conocimientos" 

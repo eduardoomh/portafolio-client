@@ -3,6 +3,7 @@ import Link from "next/link";
 import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 import MainBoton from "components/reutilizables/MainBoton";
+import ProyectoVector from "components/Proyecto/ProyectoVector";
 
 export default function Portada(props) {
     const { titulo, fecha, descripcion, imagen, url, estado } = props;
@@ -13,12 +14,11 @@ export default function Portada(props) {
             <div className="container">
                 <div className="imagen">
            
-                     <Image
-                        src="/proyecto.svg"
-                        width={width >= 600 ? 345 : 300}
-                        height={width >= 600 ? 345 : 300}
-                        alt="proyecto_card"
+                    <ProyectoVector 
+                        width={width >= 800 ? 345 : 300}
+                        height={width >= 800 ? 345 : 300}
                     />
+
                     <img
                         className="user-image"
                         src={imagen}

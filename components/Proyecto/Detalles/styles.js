@@ -31,7 +31,6 @@ const styles = css`
         div{
             h2{
                 font-size: 2rem;
-                padding: 0;
             }
 
             ul{
@@ -44,6 +43,15 @@ const styles = css`
                     }
                 }
             }
+        }
+    }
+
+    @media (min-width: 1010px){
+        div{
+            h2{
+                padding: 0;
+            }
+
         }
     }
 `;

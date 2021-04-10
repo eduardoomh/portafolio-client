@@ -35,7 +35,7 @@ const styles = css`
         }
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 1000px){
         div{
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 9rem 19rem;

@@ -66,9 +66,8 @@ export default styles;
 
 export const lightVariables = css.global`
 :root{
-   --primary: #3C3838;
+   --primary: #0d1117;
    --secondary: linear-gradient(to left, #d0ffae, #94f1d5a1);
-   --primary: #3C3838; 
    --secondary: #06FFB4;
    --tertiary: #274873; 
    --fourth: #A9EDFC;
@@ -85,15 +84,17 @@ export const lightVariables = css.global`
 
 export const darkVariables = css.global`
 :root{
-    --primary: #3C3838;
+    --primary: #0d1117;
    --secondary: linear-gradient(to left, #d0ffae, #94f1d5a1);
-   --primary: #3C3838; 
    --secondary: #06FFB4;
    --tertiary: #274873; 
    --fourth: #A9EDFC;
+   --fifth: #5493DC;
    --text: #171717;
    --text-alternative: white;
    --border: #DFDFDF;
    --background: #FAFBFD;
+   --background-page: #62ffd0;
+   --gradient: linear-gradient(41deg, var(--background-page), #03ffce00);
 }
 `;

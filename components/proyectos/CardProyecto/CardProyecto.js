@@ -41,16 +41,15 @@ export default function CardProyecto(props) {
                                 ))
                             }
                         </ul>
+                        <h4>{nombre}</h4>
                         <div>
                             <img src={imagen} alt={nombre} width={size ? 80 : 60} height={size ? 80 : 60} />
                         </div>
-                        {
-                            width >= 600 && (
-                                <section>
-                                    <MainBoton>Ver Detalle</MainBoton>
-                                </section>
-                            )
-                        }
+                      
+                        <section>
+                            <MainBoton>Ver Detalle</MainBoton>
+                        </section>
+                   
 
                     </article>
                 </a>

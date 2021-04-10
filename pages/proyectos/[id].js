@@ -11,7 +11,6 @@ import Nota from "components/reutilizables/Nota";
 
 export default function Proyecto() {
     const [proyecto, setProyecto] = useState([]);
-
     const { query } = useRouter();
     const { data } = useQuery(OBTENER_PROYECTO, {
         variables: {

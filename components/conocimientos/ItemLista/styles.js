@@ -6,12 +6,7 @@ const styles = css`
         padding-left: 1rem; 
         padding-top: 0;
         margin-bottom: 4rem;
-        transition: transform .2s ;
-
-        &:hover{
-            
-            transform: translateX(20px);
-        }
+        transition: transform .2s;
 
         h3{
             display: inline-block;
@@ -52,6 +47,10 @@ const styles = css`
             p{
                 font-size: 1.3rem;
             }
+
+            &:hover{
+            transform: translateX(5px);
+        }
         }
     }
 `;

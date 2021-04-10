@@ -19,8 +19,8 @@ export default function Repositorios(props){
                                    <li>
                                         <img 
                                             src="https://image.flaticon.com/icons/png/512/25/25231.png"
-                                            width={width <= 600 ? 40 : 50}
-                                            height={width <= 600 ? 40 : 50}
+                                            width={width <= 800 ? 40 : 50}
+                                            height={width <= 800 ? 40 : 50}
                                             alt="github logo"
                                          />
                                          <span>
