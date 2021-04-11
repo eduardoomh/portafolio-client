@@ -3,20 +3,16 @@ import dynamic from "next/dynamic";
 import usePerfil from "hooks/usePerfil";
 import Portada from "components/Inicio/Portada";
 import ParrafoArray from "components/Inicio/ParrafoArray";
+import Nota from "components/reutilizables/Nota";
 import useIntersecting from "hooks/useIntersecting";
 import Suspense from "components/reutilizables/Suspense";
 
 
 export default function Home() {
   const { usuario } = usePerfil();
-  const notaIntersecting = useIntersecting("200px");
   const estudioIntersecting = useIntersecting("10px");
 
   if (!usuario) return null;
-
-  const Nota = dynamic(() => import("components/reutilizables/Nota"), {
-    loading: () => <p>Loading...</p>
-  });
 
   let EstudioList = dynamic(() => import("components/Inicio/EstudioList"), {
     loading: () => <p>Loading...</p>
@@ -85,12 +81,10 @@ export default function Home() {
                     parrafos={usuario?.personalidad}
                   />
 
-  
-                <Suspense data={notaIntersecting} size={280}>
                   <Nota
                     texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion."
                   />
-                </Suspense>
+       
 
 
               </>
