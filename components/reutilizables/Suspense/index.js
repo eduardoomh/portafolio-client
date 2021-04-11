@@ -4,7 +4,7 @@ export default function Suspense(props){
 
     return(
         <>
-            <div ref={data.ref} className={data.show ? "" : "loading"}>
+            <div ref={data.ref}>
                 {
                     data.show && children
                 }
@@ -14,9 +14,6 @@ export default function Suspense(props){
                     min-height: 10rem;
                 }
 
-                .loading{
-                    min-height: 50rem;
-                }
                 `}</style>
         </>
         

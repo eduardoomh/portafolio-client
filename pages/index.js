@@ -2,6 +2,7 @@ import Head from 'next/head'
 import dynamic from "next/dynamic";
 import usePerfil from "hooks/usePerfil";
 import Portada from "components/Inicio/Portada";
+import ParrafoArray from "components/Inicio/ParrafoArray";
 import useIntersecting from "hooks/useIntersecting";
 import Suspense from "components/reutilizables/Suspense";
 
@@ -10,8 +11,6 @@ export default function Home() {
   const { usuario } = usePerfil();
   const notaIntersecting = useIntersecting("10px");
   const estudioIntersecting = useIntersecting("10px");
-  const experienciaIntersecting = useIntersecting("10px");
-  const aboutIntersecting = useIntersecting("10px");
 
   if (!usuario) return null;
 
@@ -22,17 +21,6 @@ export default function Home() {
   let EstudioList = estudioIntersecting.show && dynamic(() => import("components/Inicio/EstudioList"), {
     loading: () => <p>Loading...</p>
   });
-
-  
-  let ExperienciaList = experienciaIntersecting.show && dynamic(() => import("components/Inicio/ParrafoArray"), {
-    loading: () => <p>Loading...</p>
-  });
-
-  
-  let AboutList = aboutIntersecting.show && dynamic(() => import("components/Inicio/ParrafoArray"), {
-    loading: () => <p>Loading...</p>
-  });
-
 
 
   const filterFunction = (array, value) => {
@@ -70,12 +58,12 @@ export default function Home() {
             :
             (
               <>
-              <Suspense data={experienciaIntersecting}>
-                <ExperienciaList
+       
+                <ParrafoArray
                     titulo="Experiencia"
                     parrafos={usuario?.experiencia}
                   />
-              </Suspense>
+ 
 
                 <Suspense data={estudioIntersecting}>
                   <>
@@ -91,12 +79,12 @@ export default function Home() {
 
                 </Suspense>
 
-              <Suspense data={aboutIntersecting}>
-                <AboutList
+
+                <ParrafoArray
                     titulo="Más Sobre Mi"
                     parrafos={usuario?.personalidad}
                   />
-              </Suspense>
+
   
                 <Suspense data={notaIntersecting}>
                   <Nota
