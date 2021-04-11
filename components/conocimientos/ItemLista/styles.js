@@ -20,8 +20,12 @@ const styles = css`
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            gap: .5rem;
             font-size: 32px;
+
+            img{
+                margin-right: .5rem;
+                margin-left: .5rem;
+            }
             
         }
 

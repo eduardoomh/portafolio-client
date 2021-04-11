@@ -20,8 +20,7 @@ const styles = css`
             flex-direction: column;
             align-items: center;
             font-size: 1.2rem;
-            margin-top: 2.5rem;
-            gap: 3rem;            
+            margin-top: 2.5rem;           
         }
 
     }

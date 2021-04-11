@@ -7,6 +7,7 @@ const styles = css`
         grid-template-rows: 4rem 2rem 14rem 4rem;
         border: 1px solid var(--border);
         min-width: 16rem;
+        margin-bottom: 3rem;
     
         ul{
             grid-row: 1/2;

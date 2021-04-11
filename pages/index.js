@@ -9,16 +9,16 @@ import Suspense from "components/reutilizables/Suspense";
 
 export default function Home() {
   const { usuario } = usePerfil();
-  const notaIntersecting = useIntersecting("10px");
+  const notaIntersecting = useIntersecting("200px");
   const estudioIntersecting = useIntersecting("10px");
 
   if (!usuario) return null;
 
-  let Nota = notaIntersecting.show && dynamic(() => import("components/reutilizables/Nota"), {
+  const Nota = dynamic(() => import("components/reutilizables/Nota"), {
     loading: () => <p>Loading...</p>
   });
 
-  let EstudioList = estudioIntersecting.show && dynamic(() => import("components/Inicio/EstudioList"), {
+  let EstudioList = dynamic(() => import("components/Inicio/EstudioList"), {
     loading: () => <p>Loading...</p>
   });
 
@@ -65,9 +65,9 @@ export default function Home() {
                   />
  
 
-                <Suspense data={estudioIntersecting}>
+                <Suspense data={estudioIntersecting} size={500}>
                   <>
-                    <EstudioList
+                  <EstudioList
                       titulo="Universitarios"
                       data={filterFunction(usuario?.estudios, "ESTUDIO_UNIVERSITARIO")}
                     />
@@ -78,7 +78,7 @@ export default function Home() {
                   </>
 
                 </Suspense>
-
+ 
 
                 <ParrafoArray
                     titulo="Más Sobre Mi"
@@ -86,7 +86,7 @@ export default function Home() {
                   />
 
   
-                <Suspense data={notaIntersecting}>
+                <Suspense data={notaIntersecting} size={280}>
                   <Nota
                     texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion."
                   />
@@ -94,7 +94,6 @@ export default function Home() {
 
 
               </>
-
             )
         }
       </>

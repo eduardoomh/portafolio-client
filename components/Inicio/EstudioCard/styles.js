@@ -17,7 +17,7 @@ const styles = css`
         section {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 2rem 1fr 1.5rem;
+            grid-template-rows: .6fr 1fr 1.5rem;
             color: var(--text);
             padding-left: .5rem;
             gap: 0;

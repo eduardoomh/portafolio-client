@@ -1,5 +1,5 @@
 export default function Suspense(props){
-    const {children, data} = props;
+    const {children, data, size} = props;
     console.log("intersectado");
 
     return(
@@ -11,7 +11,7 @@ export default function Suspense(props){
             </div>
             <style jsx>{`
                 div{
-                    min-height: 10rem;
+                    min-height: ${size}px;
                 }
 
                 `}</style>
