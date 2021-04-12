@@ -25,7 +25,7 @@ export default function Navegacion() {
     useEffect(() => {
         setTema(styles);
 
-    },[]);
+    }, []);
 
     return (
         <>
@@ -70,6 +70,8 @@ export default function Navegacion() {
                     ) : (
                         <div className="movil-menu">
                             <Popup
+                                modal
+                                nested
                                 trigger={
 
                                     <button >
@@ -82,34 +84,37 @@ export default function Navegacion() {
                                 closeOnDocumentClick
                                 keepTooltipInside=".movil-menu"
                             >
-                                <ul className="popup">
-                                    <li className={router.pathname === "/" ? "seleccionado" : ""}>
-                                        <Link href="/">
-                                            <a>Inicio</a>
-                                        </Link>
-                                    </li>
-                                    <li className={router.pathname === "/conocimientos" ? "seleccionado" : ""}>
-                                        <Link href="/conocimientos">
-                                            <a>Conocimientos</a>
-                                        </Link>
-                                    </li>
-                                    <li className={router.pathname === "/proyectos" ? "seleccionado" : ""}>
-                                        <Link href="/proyectos">
-                                            <a>Proyectos</a>
-                                        </Link>
-                                    </li>
-                                    <li className={router.pathname === "/mejoras" ? "seleccionado" : ""}>
-                                        <Link href="/mejoras">
-                                            <a>Mejoras</a>
-                                        </Link>
-                                    </li>
-                                </ul>
+                                {close => (
+                                    <ul className="modal">
+                                        <li className={router.pathname === "/" ? "seleccionado" : ""}>
+                                            <Link href="/">
+                                                <a onClick={close}>Inicio</a>
+                                            </Link>
+                                        </li>
+                                        <li className={router.pathname === "/conocimientos" ? "seleccionado" : ""}>
+                                            <Link href="/conocimientos">
+                                                <a onClick={close}>Conocimientos</a>
+                                            </Link>
+                                        </li>
+                                        <li className={router.pathname === "/proyectos" ? "seleccionado" : ""}>
+                                            <Link href="/proyectos">
+                                                <a onClick={close}>Proyectos</a>
+                                            </Link>
+                                        </li>
+                                        <li className={router.pathname === "/mejoras" ? "seleccionado" : ""}>
+                                            <Link href="/mejoras">
+                                                <a onClick={close}>Mejoras</a>
+                                            </Link>
+                                        </li>
+                                    </ul>
+
+                                )}
                             </Popup>
                         </div>
                     )
                 }
             </header>
-            
+
             <style jsx>{tema}</style>
             <style jsx>{styleResponsive}</style>
 

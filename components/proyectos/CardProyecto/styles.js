@@ -20,7 +20,12 @@ const styles = css`
             margin: 0;
             padding: 0;
             list-style: none;
-            gap: .5rem;
+
+            img{
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+
         }
 
         h4{
