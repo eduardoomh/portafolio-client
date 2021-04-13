@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 
@@ -9,7 +10,7 @@ export default function EstudioCard({data}){
         <>
             <article>
                 <div>
-                    <img 
+                    <Image 
                         src={tecnologia?.imagen} 
                         alt={tecnologia?.nombre}
                         width={width>= 800 ? 90 : 50}

@@ -1,9 +1,7 @@
+import Image from "next/image";
 import MainBoton from "components/reutilizables/MainBoton";
 import useUtils from "hooks/useUtils";
 import useWindowSize from "hooks/useWindowSize";
-import { AiTwotoneTrophy } from "react-icons/ai";
-import { RiPsychotherapyLine, RiAwardFill } from "react-icons/ri";
-import { GoSmiley } from "react-icons/go";
 import Tooltip from "components/reutilizables/Tooltip";
 import RedesSociales from "components/reutilizables/RedesSociales";
 
@@ -22,11 +20,12 @@ export default function PerfilCard(props) {
                         width="14rem"
                         height="5rem"
                     >
-                        <img
+                        <Image
                             src={imagen}
                             width={width <= 600 ? 130 : 150}
                             height={width <= 600 ? 130 : 150}
                             alt="jesus mh"
+                            className={"styles-img"}
                         />
                     </Tooltip>
 
@@ -74,18 +73,6 @@ export default function PerfilCard(props) {
                         margin-right: 0 !important;
                         box-sizing: content-box;
                         height: 9rem;
-                
-
-                        img{
-                            border-radius: 50%;
-                            border: 4px solid white;
-                            transition: transform .3s;
-                            animation-name: imagen;
-                            animation-duration: 2s;
-                            animation-timing-function: ease-in-out;
-
-                        }
-
                         
                     }
 
@@ -101,8 +88,6 @@ export default function PerfilCard(props) {
                         padding: .5rem 0;
                         background-color:#2ee8a2;
                         font-family: "Spectral";
-
-               
                       
 
                         span{
@@ -122,14 +107,6 @@ export default function PerfilCard(props) {
                       }
                     }
 
-                    @keyframes imagen {
-                      from{
-                        transform: scale(.8,.8);
-                      }
-                      to{
-                       transform: scale(1,1);
-                      }
-                    }
 
                     #social-media{
                             display: flex;
@@ -147,6 +124,17 @@ export default function PerfilCard(props) {
 
                     }
                 }
+
+                .styles-img{
+                            border-radius: 50%;
+                            border: 4px solid white;
+                            transition: transform .3s;
+                            animation-name: imagen;
+                            animation-duration: 2s;
+                            animation-timing-function: ease-in-out;
+
+                        }
+
 
                 @media (min-width: 800px){
                     article{

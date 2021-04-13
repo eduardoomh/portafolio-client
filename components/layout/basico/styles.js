@@ -80,6 +80,28 @@ export const lightVariables = css.global`
    --gradient: linear-gradient(41deg, var(--background-page), #03ffce00);
 
 }
+
+.styles-img{
+    border-radius: 50%;
+    border: 8px solid white !important;
+    transition: transform .3s;
+    animation-name: imagen;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.img-circle{
+     border-radius: 50%;
+}
+
+@keyframes imagen {
+    from{
+        transform: scale(.8,.8);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
 `;
 
 export const darkVariables = css.global`

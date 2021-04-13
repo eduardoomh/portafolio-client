@@ -21,10 +21,6 @@ const styles = css`
             margin: 0;
             border: none;
             
-
-            img{
-                border-radius: 50%;
-            }
         }
 
         .burbuja{

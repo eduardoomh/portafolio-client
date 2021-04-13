@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useWindowSize from "hooks/useWindowSize";
 import styles from "./styles";
 
@@ -13,7 +14,7 @@ export default function Tecnologias(props){
                     {
                         principales?.map(p => (
                             <div key={p.nombre}>
-                                <img src={p.imagen} width={width <= 600 ? 48 : 55} height={width <= 600 ? 48 : 55} />
+                                <Image src={p.imagen} width={width <= 600 ? 48 : 55} height={width <= 600 ? 48 : 55} />
                                 <p>{p.nombre}</p>
                             </div>
                         ))
@@ -21,7 +22,7 @@ export default function Tecnologias(props){
                     {
                         secundarias?.map(s => (
                             <div key={s.nombre}>
-                                <img src={s.imagen} width={width <= 600 ? 48 : 55} height={width <= 600 ? 48 : 55}/>
+                                <Image src={s.imagen} width={width <= 600 ? 48 : 55} height={width <= 600 ? 48 : 55}/>
                                 <p>{s.nombre}</p>
                             </div>
                         ))

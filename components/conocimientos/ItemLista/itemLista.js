@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./styles";
 
 export default function ItemLista(props){
@@ -11,7 +12,7 @@ export default function ItemLista(props){
                     (
                         {
                             data?.tecnologias.map(item => 
-                                <img 
+                                <Image 
                                     src={item.imagen} 
                                     key={item.nombre} 
                                     width={24}

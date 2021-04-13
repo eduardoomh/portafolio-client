@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import useWindowSize from "hooks/useWindowSize";
 import MainBoton from "components/reutilizables/MainBoton";
@@ -29,7 +30,7 @@ export default function CardProyecto(props) {
                                     <li key={t.nombre}>
 
                                         <Tooltip nombre={t.nombre} position="top center">
-                                            <img
+                                            <Image
                                                 src={t.imagen}
                                                 alt={t.nombre}
                                                 width={40}
@@ -43,7 +44,13 @@ export default function CardProyecto(props) {
                         </ul>
                         <h4>{nombre}</h4>
                         <div>
-                            <img src={imagen} alt={nombre} width={size ? 80 : 60} height={size ? 80 : 60} />
+                            <Image 
+                                src={imagen} 
+                                alt={nombre} 
+                                width={size ? 80 : 60} 
+                                height={size ? 80 : 60} 
+                                className="img-circle"
+                            />
                         </div>
                       
                         <section>

@@ -15,7 +15,7 @@ export default function Nota(props){
         <>
             <div>
                 <div className="avatar">
-                    <img src={usuario?.imagen} width={64} height={64} alt="jesus mh" />
+                    <Image src={usuario?.imagen} width={64} height={64} alt="jesus mh" className="img-circle" quality={75} />
                 </div>
                 <div className="burbuja">
                     <Image src="/nota.svg" width={94} height={94} alt="nota burbuja" />
