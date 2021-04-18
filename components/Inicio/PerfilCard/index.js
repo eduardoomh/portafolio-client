@@ -20,13 +20,16 @@ export default function PerfilCard(props) {
                         width="14rem"
                         height="5rem"
                     >
-                        <Image
-                            src={imagen}
-                            width={width <= 600 ? 130 : 150}
-                            height={width <= 600 ? 130 : 150}
-                            alt="jesus mh"
-                            className={"styles-img"}
-                        />
+                        <span>
+                            <Image
+                                src={imagen}
+                                width={width <= 600 ? 130 : 150}
+                                height={width <= 600 ? 130 : 150}
+                                alt="jesus mh"
+                                className={"styles-img"}
+                            />
+                        </span>
+
                     </Tooltip>
 
                 </div>
@@ -86,14 +89,9 @@ export default function PerfilCard(props) {
                         margin-left: 2rem;
                         margin-right: 2rem;
                         padding: .5rem 0;
-                        background-color:#2ee8a2;
+                        background-color: var(--secondary-hover);
                         font-family: "Spectral";
                       
-
-                        span{
-                            padding: 0 .5rem;
-                        }
-        
                     }
 
                     @keyframes article {

@@ -14,7 +14,6 @@ const styles = css`
             grid-column: 1/2;
             display: flex;
             justify-content: center;
-            grid-gap: 1rem;
             align-items: center;
             background-color: var(--background);
             min-height: 100%;
@@ -22,11 +21,15 @@ const styles = css`
             padding: 0;
             list-style: none;
 
-            img{
+           .tecnologia-img{
                 margin-left: .5rem;
                 margin-right: .5rem;
             }
 
+        }
+
+        .terminado{
+            background-color: var(--secondary);
         }
 
         h4{
@@ -52,7 +55,7 @@ const styles = css`
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--fourth);
+            background-color: var(--sixth);
             margin: 0;
             height: 14rem;
 
@@ -71,11 +74,13 @@ const styles = css`
         }
     }
 
+
     @media (min-width: 600px){
         article{
             grid-template-rows: 4rem 2rem 14rem 4rem;
             max-width: 16rem;
             gap: 0;
+            margin-bottom: 1.5rem;
 
             ul{
                 

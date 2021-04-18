@@ -6,8 +6,8 @@ import MainBoton from "components/reutilizables/MainBoton";
 import styles from "./styles";
 import Tooltip from "components/reutilizables/Tooltip";
 
-export default function CardProyecto(props) {
-    const { nombre, imagen, tecnologias_principales, id } = props.data;
+export default function CardProyecto({terminado, data}) {
+    const { nombre, imagen, tecnologias_principales, id, } = data;
     const { width } = useWindowSize();
     const [size, setSize] = useState(false);
 
@@ -23,19 +23,22 @@ export default function CardProyecto(props) {
         <>
             <Link href={`/proyectos/${id}`}>
                 <a>
-                    <article className="contenedor">
+                    <article>
                         <ul>
                             {
                                 tecnologias_principales?.map(t => (
                                     <li key={t.nombre}>
 
-                                        <Tooltip nombre={t.nombre} position="top center">
-                                            <Image
-                                                src={t.imagen}
-                                                alt={t.nombre}
-                                                width={40}
-                                                height={40}
-                                            />
+                                        <Tooltip nombre={t.nombre} position="top center" width="3rem">
+                                            <section className="tecnologia-img">
+                                                <Image
+                                                    src={t.imagen}
+                                                    alt={t.nombre}
+                                                    width={40}
+                                                    height={40}
+                                                    
+                                                />
+                                            </section>
                                         </Tooltip>
 
                                     </li>
@@ -43,7 +46,7 @@ export default function CardProyecto(props) {
                             }
                         </ul>
                         <h4>{nombre}</h4>
-                        <div>
+                        <div  className={terminado ? "terminado" : ""}>
                             <Image 
                                 src={imagen} 
                                 alt={nombre} 

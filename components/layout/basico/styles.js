@@ -67,16 +67,17 @@ export default styles;
 export const lightVariables = css.global`
 :root{
    --primary: #0d1117;
-   --secondary: linear-gradient(to left, #d0ffae, #94f1d5a1);
-   --secondary: #06FFB4;
+   --secondary: #03ffce;
    --tertiary: #274873; 
    --fourth: #A9EDFC;
    --fifth: #5493DC;
+   --sixth: #e6ecf6;
    --text: #171717;
    --text-alternative: white;
    --border: #DFDFDF;
    --background: #FAFBFD;
    --background-page: #62ffd0;
+   --secondary-hover: #06ecbf;
    --gradient: linear-gradient(41deg, var(--background-page), #03ffce00);
 
 }

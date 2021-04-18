@@ -16,12 +16,25 @@ const styles = css`
             margin: 0;
         }
 
-        span{
+        .ul-image{
             display: flex;
             justify-content: flex-start;
             grid-gap: 1rem;
             align-items: center;
             font-size: 32px;
+            list-style: none;
+            border: none;
+            height: 4rem;
+            padding: 0;
+            margin: 0;
+
+            .image-li{
+                margin-left: .5rem;
+                margin-right: .5rem;
+                border: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
             
         }
 

@@ -15,6 +15,25 @@ const styles = css`
 
         }
 
+        .simbologia{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding-left: .7rem;
+
+            li{
+                display: flex;
+                align-items: center;
+                font-size: 1.3rem;
+
+                span{
+                    display: flex;
+                    align-items: baseline;
+                    padding: 0 .6rem;
+                }
+            }
+        }
+
         .proyectos{
             display: flex;
             flex-direction: column;

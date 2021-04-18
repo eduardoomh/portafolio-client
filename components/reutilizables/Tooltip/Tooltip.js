@@ -1,14 +1,8 @@
 import Popup from 'reactjs-popup';
 
 export default function Tooltip(props){
-    const {children, nombre, position, width = "8rem", height = "3.5rem"} = props;
+    const {children, nombre, position, width = '20px', height = "3.5rem"} = props;
 
-    const contentStyle = { 
-        background: '#3c3838', 
-        width: width, 
-        height: height, 
-        padding: ".5rem", 
-    };
 
     const overlayStyle = { 
         background: 'rgba(0,0,0,0.5)' 
@@ -26,7 +20,14 @@ export default function Tooltip(props){
                 position={position}
                 on={['hover', 'focus']}
                 arrow='center center'
-                {...{contentStyle, overlayStyle, arrowStyle }}
+                {...{overlayStyle, arrowStyle }}
+                contentStyle={{ 
+                    minWidth: width,
+                    height: height,
+                    padding: '.5rem', 
+                    background: '#3c3838', 
+                }}
+                
             >
             <p className="tooltip-imagen">{nombre}</p>
         </Popup>
