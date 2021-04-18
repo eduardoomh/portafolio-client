@@ -94,6 +94,11 @@ export const lightVariables = css.global`
      border-radius: 50%;
 }
 
+.img-margin{
+    margin-right: .5rem !important;
+    margin-left: .5rem !important;
+}
+
 @keyframes imagen {
     from{
         transform: scale(.8,.8);

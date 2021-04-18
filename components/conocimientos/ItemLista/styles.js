@@ -19,13 +19,9 @@ const styles = css`
         span{
             display: flex;
             justify-content: flex-start;
+            grid-gap: 1rem;
             align-items: center;
             font-size: 32px;
-
-            img{
-                margin-right: .5rem;
-                margin-left: .5rem;
-            }
             
         }
 

@@ -14,6 +14,7 @@ const styles = css`
             grid-column: 1/2;
             display: flex;
             justify-content: center;
+            grid-gap: 1rem;
             align-items: center;
             background-color: var(--background);
             min-height: 100%;

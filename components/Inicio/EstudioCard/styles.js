@@ -6,6 +6,7 @@ const styles = css`
         grid-template-columns: 60px 1fr;
         grid-template-rows:  1fr;
         margin-bottom: 2rem;
+        padding: 1rem 0;
         border: 5px solid var(--secondary);
 
         div{

@@ -9,19 +9,18 @@ export default function ItemLista(props){
             <li>
                 <h3>{data?.nombre}</h3>
                 <span>
-                    (
                         {
                             data?.tecnologias.map(item => 
                                 <Image 
                                     src={item.imagen} 
                                     key={item.nombre} 
-                                    width={24}
-                                    height={24}
+                                    width={48}
+                                    height={48}
                                     alt={item.nombre}
+                                  
                                 />
                             )
                         }
-                    )
                 </span>
                 <p>{data?.descripcion}</p>
             </li>
