@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react";
-import Image from "next/image";
 import Navegacion from "components/Navegacion";
 import Footer from "components/reutilizables/footer";
 import useWindowSize from "hooks/useWindowSize";
+import MainPlaceholder from "components/reutilizables/MainPlaceholder";
+import MovilMainPlaceholder from "components/reutilizables/MovilMainPlaceholder";
 import styles from "./styles";
 import {lightVariables, darkVariables} from "./styles";
 
@@ -37,15 +38,13 @@ export default function LayoutBasico(props){
                                 {
                                     width <= 800 ? (
                                         <>
-                                            <Image src="/loading_movil.svg" width={382} height={372} alt="svg" />
-                                            <Image src="/loading_text_movil.svg" width={382} height={372} alt="svg" />
+                                            <MovilMainPlaceholder />
                                         </>
                                     )
                                     :
                                     (
                                         <>
-                                            <Image src="/loading_web.svg" width={1152} height={318} alt="svg" />
-                                            <Image src="/loading_text_web.svg" width={1152} height={345} alt="svg" />
+                                            <MainPlaceholder />
                                         </>
                                     )
                                 }
