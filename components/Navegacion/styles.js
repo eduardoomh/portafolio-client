@@ -18,8 +18,9 @@ const styles = css`
         border-bottom: 1px solid white; 
 
         .div-img{
+            margin-top: .3rem;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             gap: 1rem;
             height: 3rem;
         }
@@ -68,6 +69,22 @@ const styles = css`
                     gap: 0;
                     font-size: 1.5rem;
                     color: white;
+
+                    a{
+                        &:active{
+                            border: none !important;
+                        }
+                        &:link{
+                            border: none !important;
+                        }
+                        &:focus{
+                            border: none !important;
+                        }
+                        &:checked{
+                            border: none !important;
+                        }
+
+                    }
                 }
 
             }
