@@ -7,6 +7,7 @@ const styles  = css`
 
         h2{
             font-size: 32px;
+            color: var(--primary);
         }
     }
 

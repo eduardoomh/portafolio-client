@@ -6,7 +6,7 @@ const styles = css`
 
         h2{
             padding: 0 1rem;
-            color: var(--text);
+            color: var(--primary);
         }
 
         ul{
@@ -19,7 +19,6 @@ const styles = css`
                 padding: 1rem;
                 margin: 0 1rem;
                 margin-bottom: 2rem;
-                font-family: "Spectral";
                 font-size: 1.1rem;
                 border-left: 10px solid var(--secondary);
 

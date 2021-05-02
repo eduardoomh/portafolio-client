@@ -5,6 +5,7 @@ const styles = css`
 
         h2{
             padding: 0 1rem;
+            color: var(--primary);
         }
 
         ul{
@@ -30,7 +31,6 @@ const styles = css`
                     text-align: center;
                     font-size: .8rem;
                     font-weight: bold;
-                    font-family: "Noto sans";
                     width: 100%;
                     color: var(--text);
                 }

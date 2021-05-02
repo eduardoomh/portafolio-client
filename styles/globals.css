@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Radley&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
 
 html,
 body {
@@ -18,13 +19,14 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .popup-content{
-  background-color:#0d1117 !important;
+  background-color:#3c3743 !important;
   height: 15rem;
   min-width: 19rem;
-  border: 1px solid #0d1117;
+  border: 1px solid #3c3743;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
 }
@@ -38,7 +40,7 @@ a {
   font-size: 1.6rem;
   color: white;
   height: 14rem;
-  font-family: "Spectral";
+  background-color: var(--primary);
 
   }
 

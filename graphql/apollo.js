@@ -1,5 +1,4 @@
-import { ApolloClient, HttpLink, InMemoryCache, gql } from '@apollo/client';
-import {OBTENER_USUARIO} from "./querys/usuario";
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 
 export const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -8,16 +7,3 @@ export const client = new ApolloClient({
     })
   })
 
-
-  const query = gql`
-  query {
-    prueba 
-  }
-  `
-  
-  client.query({ query })
-    .then((response) => {
-      console.log(response.data)
-    })
-
-   

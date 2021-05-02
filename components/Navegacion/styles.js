@@ -12,10 +12,8 @@ const styles = css`
         min-width: 100vw;
         padding: 0 2rem;
         background-color: var(--primary);
-        font-family: Radley serif;
         position: fixed;
         z-index: 40;   
-        border-bottom: 1px solid white; 
 
         .div-img{
             margin-top: .3rem;

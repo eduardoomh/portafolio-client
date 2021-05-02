@@ -23,17 +23,7 @@ const styles = css`
 
             }
         }
-
-        .navegacion{
-            height: 3.8rem;
-            width: 100vw;
-            background-color: var(--primary);
-            position: fixed;
-            z-index: 40;
-        }
-
-
-        
+    
     }
 
 
@@ -66,7 +56,7 @@ export default styles;
 
 export const lightVariables = css.global`
 :root{
-   --primary: #0d1117;
+   --primary: #3c3743;
    --secondary: #03ffce;
    --tertiary: #274873; 
    --fourth: #A9EDFC;

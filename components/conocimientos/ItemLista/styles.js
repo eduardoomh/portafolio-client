@@ -11,9 +11,9 @@ const styles = css`
         h3{
             display: inline-block;
             font-size: 22px;
-            font-family: "Noto sans";
             padding: 0;
             margin: 0;
+            color: var(--primary);
         }
 
         .ul-image{
@@ -40,7 +40,6 @@ const styles = css`
 
         p{
             font-size: 1.1rem;
-            font-family: "Spectral";
         }
     }
 
@@ -54,7 +53,6 @@ const styles = css`
             span{
                 display: inline-flex;
                 font-size: 2.5rem;
-                font-size: "Noto sans";
             }
 
             p{

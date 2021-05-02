@@ -3,6 +3,7 @@ import Navegacion from "components/Navegacion";
 import Footer from "components/reutilizables/footer";
 import useWindowSize from "hooks/useWindowSize";
 import MainPlaceholder from "components/reutilizables/MainPlaceholder";
+import LoadingPage from "components/reutilizables/LoadingPage";
 import styles from "./styles";
 import {lightVariables, darkVariables} from "./styles";
 
@@ -25,10 +26,7 @@ export default function LayoutBasico(props){
     return(
         <>
             <div>
-                <div className="navegacion">
-                    <Navegacion />
-                </div>
-                
+                <Navegacion />
                 <main>
                     {isUser ? 
                         children 

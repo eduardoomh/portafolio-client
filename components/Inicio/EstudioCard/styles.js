@@ -8,6 +8,7 @@ const styles = css`
         margin-bottom: 2rem;
         padding: 1rem 0;
         border: 5px solid var(--secondary);
+        border-radius: 6px;
 
         div{
             display: flex;
@@ -30,13 +31,13 @@ const styles = css`
 
             p{
                 font-size: 1.1rem;
-                font-family: "Spectral";
-                padding: 0;
+                padding: .3rem 0;
                 margin: 0;
             }
 
             h3{
                 margin: 0;
+                color: var(--primary);
             }
         }
     }

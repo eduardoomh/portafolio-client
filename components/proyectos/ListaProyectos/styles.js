@@ -3,11 +3,9 @@ import css from "styled-jsx/css";
 const styles = css`
     .contenedor{
         padding: 4rem 1rem;
-        font-size: "Spectral";
 
         h2{
-            color: var(--text);
-            font-family: 'Noto Sans', sans-serif;
+            color: var(--primary);
             padding: 0;
             margin: 0;
             font-size: 2rem;
@@ -79,7 +77,6 @@ const styles = css`
 
                 p{
                     grid-column: 1/ span 2;
-                    font-family: "Spectral";
                     font-size: 1.3rem;
                 }
 

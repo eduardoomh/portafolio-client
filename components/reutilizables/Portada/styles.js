@@ -19,8 +19,7 @@ const styles = css`
         h1{
             text-align: center;
             font-size: 32px;
-            font-family: "Noto sans";
-            color: var(--black);
+            color: var(--primary);
             margin: 0;
         }
 
@@ -28,7 +27,6 @@ const styles = css`
         p{
             width: 100vw;
             font-size: 1.2rem;
-            font-family: "Spectral";
             padding: 0 1rem;
             margin: 0;
             text-align: justify;
@@ -55,7 +53,7 @@ const styles = css`
                 align-items: flex-end;
                 grid-column: 2/3;
                 grid-row: 1/2;
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             p{

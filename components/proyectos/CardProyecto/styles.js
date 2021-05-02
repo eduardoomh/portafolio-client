@@ -41,8 +41,7 @@ const styles = css`
             margin: 0;
             padding: 0;
             background-color: var(--background);
-            color: var(--text);
-            font-family: "Spectral";
+            color: var(--primary);
             border: 1px solid var(--border);
             border-width: 1px 0;
             font-weight: normal;

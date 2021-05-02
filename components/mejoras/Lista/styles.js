@@ -8,8 +8,7 @@ const styles = css`
 
         h2{
             font-size: 2rem;
-            font-family: "Noto sans";
-            color: var(--text);
+            color: var(--primary);
 
         }
 
@@ -24,6 +23,10 @@ const styles = css`
     @media (min-width: 600px){
         div{
             padding: 0;
+
+            h2{
+                font-size: 2.2rem;
+            }
         }
     }
 

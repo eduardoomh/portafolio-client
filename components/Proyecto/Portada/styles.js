@@ -26,21 +26,20 @@ const styles = css`
             text-align: center;
             padding: 0 1rem;
             font-size: 32px;
-            color: var(--text);
+            color: var(--primary);
         }
 
         span{
             text-align: center;
             display: block;
             padding : 0 1rem;
-            color: var(--fifth);
+            color: var(--tertiary);
             font-weight: bold;
         }
 
         p{
             padding: 0 1rem;
             text-align: center;
-            font-family: "Spectral";
             font-size: 1.2rem;
         }
 
@@ -52,8 +51,7 @@ const styles = css`
 
             strong{
                 font-size: 1.3rem;
-                font-family: "Spectral";
-                background-color: var(--secondary);
+                background-color: var(--tertiary);
                 color: var(--text);
                 padding: .5rem 1rem;
             }
@@ -92,6 +90,7 @@ const styles = css`
                 align-items: flex-end;
                 padding: 0;
                 margin: 0;
+                font-size: 2.3rem;
             }
 
             span{

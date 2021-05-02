@@ -23,7 +23,6 @@ const styles = css`
             grid-row: 2/3;
             padding: .5rem 0 ;
             margin: 0;
-            font-family: "Spectral";
             font-size: 1.2rem;
         }
 
@@ -34,6 +33,7 @@ const styles = css`
             align-items: center;
             margin: 0;
             font-size: 1.4rem;
+            color: var(--primary);
         }
 
         .fecha{

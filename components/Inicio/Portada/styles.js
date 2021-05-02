@@ -4,7 +4,7 @@ const styles  = css`
     div{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 8rem 4rem 36rem;
+        grid-template-rows: 10rem 4rem 36rem;
         width: calc(100vw - 2rem);
         padding: 0 1rem;
         
@@ -13,7 +13,8 @@ const styles  = css`
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 32px;
+            font-size: 36px;
+            color: var(--primary);
             margin: 0;
         }
 
@@ -29,14 +30,13 @@ const styles  = css`
 
         .user-parrafo, .user-frase{
             font-size: 1.2rem;
-            font-family: "Spectral";
-
         }
 
         .user-frase{
             font-size: 1.8rem;
             font-weight: bold;
             text-align: center;
+            color: var(--primary);
         }
 
         .user-data{

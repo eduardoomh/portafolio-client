@@ -66,6 +66,7 @@ export default function PerfilCard(props) {
                     animation-name: article;
                     animation-duration: 2s;
                     animation-timing-function: ease-in-out;
+                    color: var(--primary);
 
                     .img-container{
                         display: flex;
@@ -90,7 +91,6 @@ export default function PerfilCard(props) {
                         margin-right: 2rem;
                         padding: .5rem 0;
                         background-color: var(--secondary-hover);
-                        font-family: "Spectral";
                       
                     }
 

@@ -6,8 +6,8 @@ const styles = css`
         padding: 4rem 1rem;
 
         h2{
-            font-family: 'Noto Sans', sans-serif;
             font-size: 2rem;
+            color: var(--primary);
         }
 
         ul{
@@ -15,7 +15,6 @@ const styles = css`
 
             
             li{
-                font-family: 'Spectral', serif;
                 text-align: start;
                 font-size: 1.2rem;
                 margin-bottom: 1rem;

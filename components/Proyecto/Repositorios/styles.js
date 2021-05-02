@@ -6,7 +6,7 @@ const styles = css`
 
         h2{
             padding: 0 1rem;
-            color: var(--text);
+            color: var(--primary);
         }
 
         ul{
@@ -19,7 +19,6 @@ const styles = css`
                 justify-content: flex-start;
                 align-items: center;
                 font-size: 1.1rem;
-                font-family: "Spectral";
                 transition: .3s text-decoration;
 
                 &:hover{

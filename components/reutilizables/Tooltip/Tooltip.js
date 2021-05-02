@@ -5,11 +5,11 @@ export default function Tooltip(props){
 
 
     const overlayStyle = { 
-        background: 'rgba(0,0,0,0.5)' 
-    };
+        background: '#3c3743' 
+    }; 
 
     const arrowStyle = { 
-        color: '#3c3838' 
+        color: '#3c3743' 
     };
 
     return(
@@ -25,7 +25,7 @@ export default function Tooltip(props){
                     minWidth: width,
                     height: height,
                     padding: '.5rem', 
-                    background: '#3c3838', 
+                    background: '#3c3743', 
                 }}
                 
             >

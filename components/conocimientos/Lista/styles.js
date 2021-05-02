@@ -6,8 +6,8 @@ const styles = css`
 
         h2{
           font-size: 32px;
-          font-family: "Noto sans";  
           margin-bottom: 4rem;
+          color: var(--primary);
         }
 
         ul{
@@ -19,6 +19,10 @@ const styles = css`
         div{
             padding : 0;
             margin-bottom: 12rem;
+
+            h2{
+                font-size: 42px;
+            }
         }
     }
 `;
