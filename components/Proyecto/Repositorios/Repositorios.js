@@ -16,7 +16,7 @@ export default function Repositorios(props){
                         data?.length !== 0 ?
                         data?.map(d => (
                             <Link key={d.nombre} href={`https://github.com/${d.nombre}`}>
-                                <a>
+                                <a target="_blank">
                                    <li>
                                         <Image 
                                             src="https://jesusmh.s3.us-east-2.amazonaws.com/tecnologias/github.svg"

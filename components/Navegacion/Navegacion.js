@@ -32,10 +32,10 @@ export default function Navegacion() {
             <header>
                 <div className="div-img">
                     <Image
-                        src="/logoMH.svg"
+                        src="/jesusmh.svg"
                         alt="Picture of the author"
-                        width={navShow ? 95 : 120}
-                        height={navShow ? 40 : 54}
+                        width={navShow ? 230 : 210}
+                        height={navShow ? 100 : 80}
                     />
 
                 </div>

@@ -4,7 +4,7 @@ const styles = css`
 
     header{
         display: grid;
-        grid-template-columns: 6rem 1fr;
+        grid-template-columns: 7rem 1fr;
         grid-template-rows: 1fr;
         padding:  0 1rem;
         min-height: 3.5rem;
@@ -18,7 +18,7 @@ const styles = css`
         .div-img{
             margin-top: .3rem;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             gap: 1rem;
             height: 3rem;
         }

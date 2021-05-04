@@ -82,7 +82,7 @@ export default function Home() {
                   />
 
                   <Nota
-                    texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicacion."
+                    texto="En las secciones del menú encontraran mis conocimientos técnicos, los proyectos en los que estoy trabajando y las futuras mejoras de la aplicación."
                   />
        
 

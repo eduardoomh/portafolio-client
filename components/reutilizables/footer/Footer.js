@@ -1,10 +1,12 @@
-import Link from "next/link";
 import usePerfil from "hooks/usePerfil";
+import useUtils from "hooks/useUtils";
 import RedesSociales from "components/reutilizables/RedesSociales"
 import styles from "./styles";
 
 export default function Footer(){
     const {usuario} = usePerfil();
+    const {curriculum} = useUtils();
+
 
 
     return(
@@ -24,7 +26,7 @@ export default function Footer(){
                 <ul>
                     <li>{usuario?.correo_electronico}</li>    
                     <li>  
-                        <a  target="_blank" href="https://drive.google.com/file/d/1WxChPkm-PXqQN6honFY2x8ckB7wdVH_t/view?usp=sharing">Curriculum</a>
+                        <a target="_blank" href={curriculum}>Curriculum</a>
                     </li>
      
                 </ul>

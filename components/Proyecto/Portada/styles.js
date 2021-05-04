@@ -51,7 +51,7 @@ const styles = css`
 
             strong{
                 font-size: 1.3rem;
-                background-color: var(--tertiary);
+                background-color: var(--secondary);
                 color: var(--text);
                 padding: .5rem 1rem;
             }

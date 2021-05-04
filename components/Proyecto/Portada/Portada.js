@@ -34,8 +34,8 @@ export default function Portada(props) {
                 <div className="boton-contenedor">
                     {
                         estado === "DISPONIBLE" ? (
-                            <Link href={`http://${url}`}>
-                                <a>
+                            <Link  href={`http://${url}`}>
+                                <a target="_blank">
                                     <MainBoton>Visualizar</MainBoton>
                                 </a>
                             </Link>

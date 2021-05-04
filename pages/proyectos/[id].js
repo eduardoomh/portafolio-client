@@ -49,7 +49,7 @@ export default function Proyecto() {
             <Detalles data={proyecto.detalles} />
 
             <Nota 
-                texto="Trato de hacer un proyecto por mes, y al terminarlo seguir agregandole mejoras periodicamente y mejorar el codigo." 
+                texto="Trato de hacer al menos un proyecto por mes, y al terminarlo seguir agregandole mejoras periodicamente y mejorar el código." 
                 />
 
 

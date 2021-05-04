@@ -20,6 +20,7 @@ const styles = css`
                 align-items: center;
                 font-size: 1.1rem;
                 transition: .3s text-decoration;
+                margin-bottom: .5rem;
 
                 &:hover{
                     text-decoration: underline;

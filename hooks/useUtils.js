@@ -1,6 +1,6 @@
 export default function useUtils(){
     return{
-        curriculum: "https://drive.google.com/file/d/1kArWFxXj2gx-dUtGMzqomhpSQbwgru9u/view?usp=sharing",
-        frase: "“Transformar mis ideas a codigo es la mayor satisfaccion que puede haber”"
+        curriculum: "https://drive.google.com/file/d/1nhIvqB3I0m7PQdtY_SLi7X1CQAnsEimZ/view?usp=sharing",
+        frase: "“Tener ideas y transformarlas en código también es un superpoder”"
     }
 }

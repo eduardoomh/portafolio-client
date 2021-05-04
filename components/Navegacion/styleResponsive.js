@@ -11,7 +11,7 @@ export const styleResponsive = css`
 
     header{
         display: grid;
-        grid-template-columns: 10rem 1fr;
+        grid-template-columns: 12rem 1fr;
         grid-template-rows: 1fr;
         min-height: 3.5rem;
         padding: 0 9rem !important;
