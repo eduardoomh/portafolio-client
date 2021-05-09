@@ -15,6 +15,7 @@ export const OBTENER_USUARIO = gql`
             linkedin
             edad
             imagen
+            curriculum
             descripcion
             experiencia{
                 texto

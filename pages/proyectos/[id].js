@@ -39,6 +39,7 @@ export default function Proyecto() {
                 imagen={proyecto.imagen || "cargando"}
                 url={proyecto.url || "cargando"}
                 estado={proyecto.estado || "cargando"}
+                infografia={proyecto.infografia}
             />
             <Tecnologias 
                 principales={proyecto.tecnologias_principales } 

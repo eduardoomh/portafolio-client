@@ -7,7 +7,6 @@ import Nota from "components/reutilizables/Nota";
 import useIntersecting from "hooks/useIntersecting";
 import Suspense from "components/reutilizables/Suspense";
 
-
 export default function Home() {
   const { usuario } = usePerfil();
   const estudioIntersecting = useIntersecting("10px");
@@ -44,6 +43,7 @@ export default function Home() {
           github={usuario?.github}
           linkedin={usuario?.linkedin}
           telefono={usuario?.telefono}
+          curriculum={usuario?.curriculum}
         />
         {
           !usuario ? (

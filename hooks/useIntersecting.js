@@ -8,12 +8,10 @@ export default function useIntersecting(margin){
     useEffect(() => {
         const onChange = (entries, observer) => {
             const el = entries[0]
-            console.log(entries[0])
 
             if (el.isIntersecting === true) {
                 setShow(true);
                 observer.disconnect();
-                console.log("perfil datos is intersecting")
             }
         }
 

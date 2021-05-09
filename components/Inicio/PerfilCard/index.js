@@ -1,13 +1,11 @@
 import Image from "next/image";
 import MainBoton from "components/reutilizables/MainBoton";
-import useUtils from "hooks/useUtils";
 import useWindowSize from "hooks/useWindowSize";
 import Tooltip from "components/reutilizables/Tooltip";
 import RedesSociales from "components/reutilizables/RedesSociales";
 
 export default function PerfilCard(props) {
-    const { imagen, facebook, github, linkedin, telefono } = props;
-    const { curriculum } = useUtils();
+    const { imagen, facebook, github, linkedin, telefono, curriculum } = props;
     const { width } = useWindowSize();
 
     return (

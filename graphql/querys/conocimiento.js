@@ -36,8 +36,8 @@ export const CONOCIMIENTOS_DATOS_FRAGMENT = gql`
         nombre
         descripcion
         tecnologias{
-        nombre
-        imagen
+            nombre
+            imagen
         }
     }
 `;
@@ -46,7 +46,7 @@ export const OBTENER_LISTA_CONOCIMIENTOS = gql`
     query obtenerListaConocimientos($tipo1: TipoConocimientoEnum! $tipo2:TipoConocimientoEnum!){
     obtenerListaConocimientos(tipo1: $tipo1 tipo2: $tipo2){
         datos{
-        conocimientos
+            conocimientos
             nota_conocimientos
         }
         conocimientos_principales(tipo: $tipo1){

@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react";
 import Head from "next/head";
-import { useQuery } from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 import { OBTENER_MEJORA } from "graphql/querys/mejora";
 import useWindowSIze from "hooks/useWindowSize";
+import usePerfil from "hooks/usePerfil"
 import Portada from "components/reutilizables/Portada";
 import Lista from "components/mejoras/Lista";
 import Nota from "components/reutilizables/Nota";
@@ -10,15 +11,24 @@ import MejorasVector from "components/mejoras/MejorasVector";
 
 
 export default function Mejoras() {
-    const [mejoras, setMejoras] = useState([]);
-    const { data } = useQuery(OBTENER_MEJORA);
     const {width} = useWindowSIze();
+    const {mejoras, actualizarMejoras} = usePerfil();
+    const [getMejoras, { loading, data }] = useLazyQuery(OBTENER_MEJORA); 
 
     useEffect(() => {
-        if(data?.obtenerMejora){
-            setMejoras(data?.obtenerMejora)
+        if(mejoras === undefined){
+
+            try{
+                getMejoras(); 
+                if(!loading){
+                    actualizarMejoras(data?.obtenerMejora); 
+                }
+                
+            }catch(err){
+                console.log(err);
+            }
         }
-    }, [data])
+    }, [mejoras, data]);
 
     return (
         <>

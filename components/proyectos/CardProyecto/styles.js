@@ -91,6 +91,7 @@ const styles = css`
 
             div{
                 height: 14rem;
+                overflow: hidden;
 
             }
 

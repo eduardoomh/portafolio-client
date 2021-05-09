@@ -1,30 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
-import { useQuery } from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 import { OBTENER_LISTA_PROYECTOS } from "graphql/querys/proyecto";
 import useWindowSIze from "hooks/useWindowSize";
+import usePerfil from "hooks/usePerfil"
 import ListaProyectos from "components/proyectos/ListaProyectos";
 import Portada from "components/reutilizables/Portada";
 import Nota from "components/reutilizables/Nota";
 import ProyectosVector from "components/proyectos/ProyectosVector";
 
 export default function Proyectos() {
-    const [proyectos, setProyectos] = useState([]);
     const {width} = useWindowSIze();
-    const { data, loading } = useQuery(OBTENER_LISTA_PROYECTOS, {
+    const {proyectos, actualizarProyectos} = usePerfil();
+
+    const [getProyectos, { loading, data }] = useLazyQuery(OBTENER_LISTA_PROYECTOS, {
         variables: {
             tipo1: "DISPONIBLE",
             tipo2: "EN_DESARROLLO"
-        }
-    });
-
+        } 
+    }); 
+    
     useEffect(() => {
+        if(proyectos === undefined){
 
-        if(data?.obtenerListaProyectos){
-            setProyectos(data?.obtenerListaProyectos);
+            try{
+                getProyectos(); 
+                if(!loading){
+                    actualizarProyectos(data?.obtenerListaProyectos); 
+                }
+                
+            }catch(err){
+                console.log(err);
+            }
         }
+    }, [proyectos, data]);
 
-    }, [data]);
 
     return (
         <>

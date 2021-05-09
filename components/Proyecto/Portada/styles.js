@@ -73,6 +73,7 @@ const styles = css`
                 align-items: flex-end;
                 padding: 0;
                 margin: 0;
+                margin-bottom: 2rem;
                 
             }
 

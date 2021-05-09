@@ -1,7 +1,6 @@
 import {useState, useEffect, useMemo} from "react";
 import {ApolloProvider} from "@apollo/client";
 import {client} from "graphql/apollo";
-import {OBTENER_USUARIO} from "graphql/querys/usuario";
 import usuarioContext from "context/usuarioContext";
 import LayoutBasico from "components/layout/basico";
 import 'styles/globals.css'
@@ -10,13 +9,14 @@ import 'reactjs-popup/dist/index.css';
 
 function MyApp({ Component, pageProps }) {
   const [usuario, setUsuario] = useState(undefined);
+  const [conocimientos, setConocimientos] = useState(undefined);
+  const [proyectos, setProyectos] = useState(undefined);
+  const [mejoras, setMejoras] = useState(undefined);
   const [dark, setDark] = useState(undefined);
 
 
   useEffect(() =>{
     setDark(false);
-    recuperarUsuario();
-  
 
   }, []);
 
@@ -24,20 +24,35 @@ function MyApp({ Component, pageProps }) {
 
   },[dark])
 
-  const recuperarUsuario = () => {
-      client.query({query: OBTENER_USUARIO})
-      .then((response) => {
-        setUsuario(response?.data.obtenerUsuario)
-      })
-  }
-; 
 
+  const actualizarUsuario = (data) => {
+    setUsuario(data)
+  }
+
+  const actualizarConocimientos = (data) => {
+    setConocimientos(data)
+  }
+
+  const actualizarProyectos = (data) => {
+    setProyectos(data)
+  }
+  
+  const actualizarMejoras = (data) => {
+    setMejoras(data)
+  }
 
   const usuarioInfo = useMemo(
     () => ({
-      usuario
+      usuario,
+      conocimientos,
+      proyectos,
+      mejoras,
+      actualizarUsuario,
+      actualizarConocimientos,
+      actualizarProyectos,
+      actualizarMejoras
     }),
-    [usuario]);
+    [usuario, conocimientos, proyectos, mejoras]);
 
 
 
